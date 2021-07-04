@@ -146,25 +146,30 @@ header a { text-decoration: none; }
 
 #categories li:hover { background-color: #f8f8f8; }
 
-.category-location { border-bottom: #82c5eb 3px solid; }
+.category-location { border-bottom: #FF6659 3px solid; }
 
-.category-location a:hover { color: #82c5eb; }
+.category-location a:hover { color: #FF6659; }
 
-.category-news { border-bottom: #a2f58c 3px solid; }
+.category-news { border-bottom: #FFD066 3px solid; }
 
-.category-news a:hover { color: #a2f58c; }
+.category-news a:hover { color: #FFD066; }
 
-.category-event { border-bottom: #ffed71 3px solid; }
+.category-event { border-bottom: #94E46D 3px solid; }
 
-.category-event a:hover { color: #ffed71; }
+.category-event a:hover { color: #94E46D; }
 
-.category-living { border-bottom: #ffbe4e 3px solid; }
+.category-living { border-bottom: #6ED2EF 3px solid; }
 
-.category-living a:hover { color: #ffbe4e; }
+.category-living a:hover { color: #6ED2EF; }
 
-.category-culture { border-bottom: #ff7050 3px solid; }
+.category-culture { border-bottom: #B481F4 3px solid; }
 
-.category-culture a:hover { color: #ff7050; }
+.category-culture a:hover { color: #B481F4; }
+
+.category-sports { border-bottom: #8A97FF 3px solid; }
+
+.category-sports a:hover { color: #8A97FF; }
+
 
 /* シェアボタン */
 #share-button { display: none; }

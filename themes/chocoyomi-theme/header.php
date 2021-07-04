@@ -31,7 +31,7 @@
       <li class="category category-event"><a href="<?php echo get_category_url("イベント"); ?>">イベント</li></a>
       <li class="category category-living"><a href="<?php echo get_category_url("暮らし"); ?>">暮らし</li></a>
       <li class="category category-culture"><a href="<?php echo get_category_url("カルチャー"); ?>">カルチャー</li></a>
-      <li class="category category-news"><a href="<?php echo get_category_url("スポーツ"); ?>">スポーツ</li></a>
+      <li class="category category-sports"><a href="<?php echo get_category_url("スポーツ"); ?>">スポーツ</li></a>
     </ul>
   </div>
 </header>
