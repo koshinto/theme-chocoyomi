@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-<div class="container main">
   <?php if(is_single()): ?>
     <!-- 小ページ -->
     <section id="content-head">
@@ -79,5 +78,5 @@
   <?php if($wp_query->max_num_pages > 1): ?>
     
   <?php endif; ?>
-</div>
 <?php get_footer(); ?>
+</div>

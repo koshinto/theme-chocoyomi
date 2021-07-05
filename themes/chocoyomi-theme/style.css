@@ -9,7 +9,13 @@ Version: 1.0
 body {
   margin: 0;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", Yu Gothic, "メイリオ", "Hiragino Kaku Gothic ProN", sans-serif;
+  background-color: #EFEFEF;
 }
+
+ #banner { 
+   margin-top: 0;
+   padding-top: 10px;
+  }
 
 a {
   color: black;
@@ -23,6 +29,7 @@ a {
   margin-right: auto;
   padding-left: 30px;
   padding-right: 30px;
+  background-color: white;
 }
 
 .main::after {
@@ -78,15 +85,19 @@ header h1 { margin: 0; }
 
 header a { text-decoration: none; }
 
-.blogtitle {
-  display: block;
-}
+.blogtitle { display: block; }
 
 .blogtitle h1 {
   display: inline-block;
   margin-top: 0;
   font-family: 'Pacifico', cursive;
   text-align: center;
+}
+
+.blogtitle::after {
+  display: block;
+  content: "";
+  clear: both;
 }
 
 #logo {
@@ -179,7 +190,6 @@ header a { text-decoration: none; }
 footer {
   height: 350px;
   color: #7fb39e;
-  background-color: #cefeeb;
 }
 
 /* メインカラム */
@@ -206,6 +216,8 @@ section a {
 }
 
 #title {
+  margin-top: 0;
+  padding-top: 20px;
   font-size: 2.4em;
 }
 
