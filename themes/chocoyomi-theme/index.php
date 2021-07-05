@@ -34,6 +34,10 @@
   <?php else: ?>
     <!-- インデックス -->
     <?php if(have_posts()): ?>
+      <div class="posts-title">
+        <p>New Article</p>
+        <h2>最新の記事</h2>
+      </div>
       <div class="cardlayout">
         <?php while(have_posts()): the_post(); ?>
           <section class="card">

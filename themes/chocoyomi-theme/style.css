@@ -155,7 +155,7 @@ header a { text-decoration: none; }
   width: 100%;
 }
 
-#categories li:hover { background-color: #f8f8f8; }
+#categories li:hover { background-color: #FAFAFA; }
 
 .category-location { border-bottom: #82c5eb 3px solid; }
 
@@ -267,6 +267,15 @@ section a {
 .sidebar { display: none; }
 
 /* 投稿 */
+.posts-title { text-align: center; }
+
+.posts-title p {
+  margin-bottom: 0;
+  color: #0D527F;
+}
+
+.posts-title h2 { margin-top: 7px; }
+
 .cardlayout {
   display: flex;
   flex-wrap: wrap;
