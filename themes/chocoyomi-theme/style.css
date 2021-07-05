@@ -270,11 +270,15 @@ section a {
 .posts-title { text-align: center; }
 
 .posts-title p {
+  margin-top: 50px;
   margin-bottom: 0;
   color: #0D527F;
 }
 
-.posts-title h2 { margin-top: 7px; }
+.posts-title h2 {
+  margin-top: 7px;
+  margin-bottom: 20px;
+}
 
 .cardlayout {
   display: flex;

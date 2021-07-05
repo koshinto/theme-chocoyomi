@@ -47,28 +47,10 @@
               <?php endif; ?>
               <div class="card-text">
                 <h2 class="card-title"><?php the_title(); ?></h2>
-                <div class="postinfo">
-                  <ul>
-                    <li>
-                      <span class="info-icon"><i class="far fa-calendar-alt"></i></span><?php the_time('Y年m月d日'); ?>
-                    </li>
-                    <li>
-                      <span class="info-icon"><i class="fas fa-tag"></i></span><?php the_category(', ') ?>
-                    </li>
-                    <li>
-                      <span class="info-icon"><i class="fas fa-user-alt"></i></span><?php the_author(); ?>
-                    </li>
-                  </ul>
-                </div>
                 <div class="user-reaction-wrap">
                   <div class="user-reaction user-reaction-comment">
                     <span class="user-reaction-icon"><i class="fas fa-comment"></i></span><?php comments_number('0', '1', '%'); ?>
                   </div>
-                  <!-- 実装予定 -->
-                  <!-- <div class="user-reaction user-reaction-like"> -->
-                    <!-- 未実装 -->
-                    <!-- <span class="user-reaction-icon"><i class="fas fa-heart"></i></span>2 -->
-                  <!-- </div> -->
                 </div>
               </div>
             </a>
@@ -77,6 +59,11 @@
       </div>
     <?php endif; ?>
   <?php endif; ?>
+
+  <div class="posts-title">
+    <p>Recommend by Editorial</p>
+    <h2>編集部のおすすめ</h2>
+  </div>
 
   <!-- ページネーション -->
   <?php if($wp_query->max_num_pages > 1): ?>
