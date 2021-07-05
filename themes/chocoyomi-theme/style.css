@@ -400,7 +400,7 @@ section a {
 }
 
 
-/*  */
+/* レスポンシブ */
 @media (min-width: 720px) {
   #share-button { display: inline; }
 

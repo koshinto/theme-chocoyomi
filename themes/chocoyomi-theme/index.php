@@ -57,13 +57,24 @@
           </section>
         <?php endwhile; ?>
       </div>
+      <div class="posts-title">
+        <p>Recommend by Editorial</p>
+        <h2>編集部のおすすめ</h2>
+        <!-- カテゴリーの記事 -->
+      </div>
+      <div class="posts-title">
+        <p>Recommend by Editorial</p>
+        <h2>編集部のおすすめ</h2>
+        <!-- カテゴリーの記事 -->
+      </div>
+      <div class="posts-title">
+        <p>Recommend by Editorial</p>
+        <h2>編集部のおすすめ</h2>
+        <!-- カテゴリーの記事 -->
+      </div>
     <?php endif; ?>
   <?php endif; ?>
 
-  <div class="posts-title">
-    <p>Recommend by Editorial</p>
-    <h2>編集部のおすすめ</h2>
-  </div>
 
   <!-- ページネーション -->
   <?php if($wp_query->max_num_pages > 1): ?>
