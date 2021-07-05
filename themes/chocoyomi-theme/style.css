@@ -136,7 +136,7 @@ header a { text-decoration: none; }
 }
 
 #categories {
-  display: block;
+  display: none;
   margin-bottom: 20px;
   width: 100%;
   font-size: 10px;
@@ -403,6 +403,8 @@ section a {
 /*  */
 @media (min-width: 720px) {
   #share-button { display: inline; }
+
+  #categories { display: block; }
   
   .card {
     width: calc(95% / 2);
