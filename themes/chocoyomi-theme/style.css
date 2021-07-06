@@ -313,7 +313,7 @@ article h1 {
 
 .card-title {
   color: black;
-  text-decoration: none;
+  text-align: left;
   margin-top: 5px;
   margin-bottom: 5px;
   transition-duration: 0.5s;

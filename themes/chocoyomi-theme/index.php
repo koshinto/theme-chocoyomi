@@ -61,6 +61,7 @@
         <p>Recommend by Editorial</p>
         <h2>編集部のおすすめ</h2>
         <!-- カテゴリーの記事 -->
+        <div class="cardlayout">
         <?php
           $query = new WP_Query(
             array(
@@ -69,8 +70,21 @@
           ));
           while($query->have_posts()): $query->the_post();
         ?>
-          <?php the_post_thumbnail(); ?>
-          <?php the_title(); ?>
+          <section class="card">
+            <a class="postlink" href="<?php the_permalink(); ?>">
+              <?php if(has_post_thumbnail()): ?>
+                <figure class="card-thumbnail"><?php the_post_thumbnail(array(360, 240)); ?></figure>
+              <?php endif; ?>
+              <div class="card-text">
+                <h2 class="card-title"><?php the_title(); ?></h2>
+                <div class="user-reaction-wrap">
+                  <div class="user-reaction user-reaction-comment">
+                    <span class="user-reaction-icon"><i class="fas fa-comment"></i></span><?php comments_number('0', '1', '%'); ?>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </section>
         <?php endwhile; ?>
       </div>
       <div class="posts-title">
