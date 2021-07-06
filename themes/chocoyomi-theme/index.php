@@ -61,6 +61,17 @@
         <p>Recommend by Editorial</p>
         <h2>編集部のおすすめ</h2>
         <!-- カテゴリーの記事 -->
+        <?php
+          $query = new WP_Query(
+            array(
+              'cat' => 'ニュース' -> term_id,
+              'post_per_page' => 3
+          ));
+          while($query->have_posts()): $query->the_post();
+        ?>
+          <?php the_post_thumbnail(); ?>
+          <?php the_title(); ?>
+        <?php endwhile; ?>
       </div>
       <div class="posts-title">
         <p>Recommend by Editorial</p>
