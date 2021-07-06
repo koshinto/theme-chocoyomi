@@ -1,4 +1,4 @@
- <footer>
+ <footer id="footer">
    <div class="container">
      <h1>このサイトについて</h1>
    </div>

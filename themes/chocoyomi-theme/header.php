@@ -14,7 +14,9 @@
   <?php wp_head(); ?>
 </head>
 <body>
-<header>
+
+<div class="container main">
+<header id="banner">
   <div class="blogtitle container">
     <h1><a href="<?php echo home_url(); ?>">
       <img id="logo" src="<?php bloginfo('template_url'); ?>/assets/forLight.svg" />
