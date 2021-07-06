@@ -38,7 +38,7 @@
 
       <!-- インデックス -->
       <?php if(have_posts()): ?>
-        <div class="posts-title">
+        <div class="caption">
           <p>New Article</p>
           <h2>最新の記事</h2>
         </div>
@@ -61,7 +61,7 @@
             </section>
           <?php endwhile; ?>
         </div>
-        <div class="posts-title">
+        <div class="caption">
           <p>Recommend by Editorial</p>
           <h2>編集部のおすすめ</h2>
           <!-- カテゴリーの記事 -->
@@ -91,12 +91,12 @@
             </section>
           <?php endwhile; ?>
         </div>
-        <div class="posts-title">
+        <div class="caption">
           <p>Recommend by Editorial</p>
           <h2>編集部のおすすめ</h2>
           <!-- カテゴリーの記事 -->
         </div>
-        <div class="posts-title">
+        <div class="caption">
           <p>Recommend by Editorial</p>
           <h2>編集部のおすすめ</h2>
           <!-- カテゴリーの記事 -->

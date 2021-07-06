@@ -19,3 +19,10 @@ function get_category_url($category_name) {
   $category_id = get_cat_ID($category_name);
   return get_category_link($category_id);
 } 
+
+// コメントのテキストを変更
+add_filter( 'comment_form_defaults', 'my_title_reply');
+function my_title_reply( $defaults){
+    $defaults['title_reply'] = 'この記事の感想を書きませんか？';
+    return $defaults;
+}
