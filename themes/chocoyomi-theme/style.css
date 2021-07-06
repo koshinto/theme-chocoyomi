@@ -12,6 +12,12 @@ body {
   background-color: #EFEFEF;
 }
 
+article::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
  #banner { 
    margin-top: 0;
    padding-top: 10px;
@@ -27,8 +33,6 @@ a {
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px;
   background-color: white;
 }
 
@@ -187,7 +191,7 @@ header a { text-decoration: none; }
 }
 
 /* フッター */
-footer {
+#footer {
   height: 350px;
   color: #7fb39e;
 }
@@ -399,9 +403,32 @@ article h1 {
   background-color: white;
 }
 
+/* コメントフォーム */
+#comment-list {
+  list-style: none;
+}
+
+.comment-form p label {
+  display: block;
+}
+
+.comment-form p textarea,
+.comment-form p input[type="text"],
+.comment-form p input[type="email"],
+.comment-form p input[type="url"] {
+  width: 100%;
+}
+
+.comment-form-cookies-consent { display: block; }
+
 
 /* レスポンシブ */
 @media (min-width: 720px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
   #share-button { display: inline; }
 
   #categories { display: block; }
@@ -420,6 +447,7 @@ article h1 {
   
   .sidemenu {
     display: block;
+    padding-left: 20px;
     width: 35%;
     float: right;
   }
