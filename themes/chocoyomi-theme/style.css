@@ -204,11 +204,6 @@ article h1 {
   font-weight: 900;
 }
 
-section a {
-  color: #4B89BF;
-  text-decoration: underline;
-}
-
 /* 小ページ */
 #head-text {
   margin-top: 20px;
@@ -240,6 +235,11 @@ section a {
 .content h1,
 .content h2,
 .content h3 { margin-top: 50px }
+
+.content p a {
+  color: #4B89BF;
+  text-decoration: underline;
+}
 
 .wp-block-quote {
   margin: 0;
