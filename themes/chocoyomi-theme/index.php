@@ -50,7 +50,7 @@
                   <figure class="card-thumbnail"><?php the_post_thumbnail(array(360, 240)); ?></figure>
                 <?php endif; ?>
                 <div class="card-text">
-                  <h2 class="card-title"><?php the_title(); ?></h2>
+                  <h2 class="card-title"><?php echo wp_trim_words(get_the_title(), 24, '...'); ?></h2>
                   <div class="user-reaction-wrap">
                     <div class="user-reaction user-reaction-comment">
                       <span class="user-reaction-icon"><i class="fas fa-comment"></i></span><?php comments_number('0', '1', '%'); ?>
@@ -80,7 +80,7 @@
                   <figure class="card-thumbnail"><?php the_post_thumbnail(array(360, 240)); ?></figure>
                 <?php endif; ?>
                 <div class="card-text">
-                  <h2 class="card-title"><?php the_title(); ?></h2>
+                  <h2 class="card-title"><?php echo wp_trim_words(get_the_title(), 24, '...') ?></h2>
                   <div class="user-reaction-wrap">
                     <div class="user-reaction user-reaction-comment">
                       <span class="user-reaction-icon"><i class="fas fa-comment"></i></span><?php comments_number('0', '1', '%'); ?>

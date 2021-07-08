@@ -431,7 +431,14 @@ article h1 {
   background-color: #EDEDED;
 }
 
+.comment-form textarea { max-width: 100%; }
+
 .comment-form-cookies-consent { display: block; }
+
+input[type="checkbox"] {
+  width: auto;
+  display: inline;
+}
 
 .comment-metadata {
   font-size: 0.75em;
