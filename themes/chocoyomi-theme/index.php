@@ -72,7 +72,8 @@
                 'cat' => 'ニュース' -> term_id,
                 'post_per_page' => 3
             ));
-            while($query->have_posts()): $query->the_post();
+            for($i = 0; $i < 3; $i++):
+            if($query->have_posts()): $query->the_post();
           ?>
             <section class="card">
               <a class="postlink" href="<?php the_permalink(); ?>">
@@ -89,7 +90,7 @@
                 </div>
               </a>
             </section>
-          <?php endwhile; ?>
+          <?php endif; endfor; ?>
         </div>
         <div class="caption">
           <p>Recommend by Editorial</p>
