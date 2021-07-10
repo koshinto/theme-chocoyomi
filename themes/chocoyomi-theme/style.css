@@ -442,6 +442,7 @@ article h1 {
 .comment-form p input[type="text"],
 .comment-form p input[type="email"],
 .comment-form p input[type="url"] {
+  box-sizing: border-box;
   width: 100%;
   padding: 10px;
   border: none;
@@ -458,12 +459,30 @@ input[type="checkbox"] {
   display: inline;
 }
 
+.mobile-width, .comment-body {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .comment-metadata {
   font-size: 0.75em;
   color: #777;
 }
 
 .comment-metadata a { color: #777; }
+
+.comment-author { display: table; }
+
+.comment-author img {
+  display: table-cell;
+  border-radius: 50%;
+}
+
+.comment-author .fn {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 10px;
+} 
 
 .comment-author .says { display: none; }
 
@@ -472,6 +491,19 @@ input[type="checkbox"] {
   color: #4B89BF;
 }
 
+.form-submit  .submit {
+  width: 100%;
+  font-size: 14px;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+}
+
+.required { color: #ff7050; }
+
+/* 汎用 */
 .caption { text-align: center; }
 
 .caption p {
@@ -513,6 +545,24 @@ input[type="checkbox"] {
     padding-left: 20px;
     width: 35%;
     float: right;
+  }
+
+  .comment-body {
+    width: 100%;
+    margin: 0;
+  }
+
+  .form-submit { text-align: center; }
+
+  .form-submit .submit {
+    width: 50%;
+    padding: 15px 30px;
+  }
+
+  .form-submit .submit:hover {
+    border: black 1px solid;
+    color: black;
+    background-color: white;
   }
 }
 
