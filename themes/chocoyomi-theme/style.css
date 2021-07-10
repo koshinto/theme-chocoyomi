@@ -561,7 +561,7 @@ input[type="checkbox"] {
   }
 
   .form-submit .submit:hover {
-    border: black 1px solid;
+    border: black 2px solid;
     color: black;
     background-color: white;
   }
