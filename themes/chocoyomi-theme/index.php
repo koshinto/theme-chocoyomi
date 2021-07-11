@@ -17,7 +17,8 @@
                 <span class="info-icon"><i class="fas fa-user-alt"></i></span>
                 <?php
                   $author = get_userdata($post -> post_author);
-                  echo $author->display_name;
+                  $author_name = $author -> display_name;
+                  echo $author_name
                 ?>
               </li>
             </ul>
@@ -32,6 +33,11 @@
       </section>
 
       <ul class="sidemenu">
+        <li>
+          <p>この記事の著者</p>
+          <h3><?php echo $author_name; ?></h3>
+          <?php get_avatar($author, 100); ?>
+        </li>
         <?php dynamic_sidebar(); ?>
       </ul>
     <?php else: ?>
@@ -64,16 +70,17 @@
         <div class="caption">
           <p>Recommend by Editorial</p>
           <h2>編集部のおすすめ</h2>
+        </div>
           <!-- カテゴリーの記事 -->
           <div class="cardlayout">
           <?php
-            $query = new WP_Query(
-              array(
-                'cat' => 'ニュース' -> term_id,
-                'post_per_page' => 3
-            ));
-            for($i = 0; $i < 3; $i++):
-            if($query->have_posts()): $query->the_post();
+            $args = array(
+              'posts_per_page' => 3,
+              'category_name' => '投稿フォーマット'
+            );
+            $posts = get_posts($args);
+            foreach($posts as $post):
+            setup_postdata($post);
           ?>
             <section class="card">
               <a class="postlink" href="<?php the_permalink(); ?>">
@@ -90,7 +97,7 @@
                 </div>
               </a>
             </section>
-          <?php endif; endfor; ?>
+          <?php endforeach;  ?>
         </div>
         <div class="caption">
           <p>Recommend by Editorial</p>
@@ -111,4 +118,3 @@
   </article>
 
 <?php get_footer(); ?>
-</div>
