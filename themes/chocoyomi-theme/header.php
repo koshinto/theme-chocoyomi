@@ -19,7 +19,7 @@
 <header id="banner">
   <div class="blogtitle container">
     <h1><a href="<?php echo home_url(); ?>">
-      <img id="logo" src="<?php bloginfo('template_url'); ?>/assets/forLight.svg" />
+      <?php bloginfo('name'); ?>
     </a></h1>
     <ul id="share-button">
       <li><a href="https://twitter.com/intent/tweet?text=<?php bloginfo('name'); ?> <?php echo get_site_url(); ?> <twitter account>"><i class="fab fa-twitter"></i></a></li>
