@@ -25,6 +25,44 @@ body {
   overflow: hidden;
 }
 
+#header-nav { 
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#logo a {
+  color: #242423;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+#header-search-form {
+  display: none;
+  margin-left: auto;
+}
+
+#header-search-form input[type="search"], #header-search-form button {
+  height: 100%;
+  border: none;
+  font-size: 16px;
+}
+
+#header-search-form input[type="search"] {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #EFEFEF;
+  border-radius: 5px 0 0 5px;
+}
+
+#header-search-form button {
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+  background-color: #242423;
+  border-radius: 0 5px 5px 0;
+}
+
 
 /* 投稿一覧 */
 .wp-post-image {
@@ -52,4 +90,6 @@ body {
   .container{
     padding: 0 50px;
   }
+
+  #header-search-form { display: block; }
 }

@@ -16,21 +16,15 @@
 <body <?php body_class(); ?>>
 <header>
   <div class="container">
-    <section>
-      <ul>
-        <li><a href="<?php echo home_url('/contact'); ?>">お問い合わせ</a></li>
-        <li><a href="<?php echo home_url('/press_release'); ?>">プレスリリース</a></li>
-      </ul>
-    </section>
-    <nav>
-      <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+    <nav id="header-nav">
+      <h1 id="logo"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
       <?php get_search_form(); ?>
     </nav>
-    <?php wp_nav_menu(array(
-        'container' => 'nav',
-        'container_class' => 'header-menu',
-        'theme_location' => 'header-menu'
-    ));
-    ?>
+      <?php wp_nav_menu(array(
+          'container' => 'nav',
+          'container_class' => 'header-menu',
+          'theme_location' => 'header-menu'
+      ));
+      ?>
   </div>
 </header>
