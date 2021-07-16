@@ -9,10 +9,16 @@ register_sidebar();
 add_theme_support('post-thumbnails');
 
 // 概要の文字数
-function mb_length($length) {
+function excertpt_my_length($length) {
   return 55;
 }
-add_filter('excerpt_mblength', 'mb_length');
+add_filter('excerpt_mblength', 'excertpt_my_length');
+
+// 概要の省略記号
+function my_more($more) {
+  return '...';
+}
+add_filter('excerpt_more', 'my_more');
 
 // カテゴリーのURL
 function get_category_url($category_name) {
@@ -26,6 +32,12 @@ function the_categories() {
     echo '<li>'.$category->name.'</li>';
   }
 }
+
+// ナビゲーションメニュー
+register_nav_menus(array(
+  'header-menu' => 'Header Menu',
+  'footer-menu' => 'Footer Menu'
+));
 
 // コメントのテキストを変更
 add_filter( 'comment_form_defaults', 'my_title_reply');
