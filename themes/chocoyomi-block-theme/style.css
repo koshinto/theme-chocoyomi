@@ -7,4 +7,49 @@ Version: 1.0
 
 * { margin: 0; }
 
-body { font-family: Arial, Helvetica, sans-serif; }
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #242423;
+  background-color: #EFEFEF;
+}
+
+.container {
+  box-sizing: border-box;
+  max-width: 1080px;
+  margin: 0 auto;
+  background-color: white;
+  overflow: hidden;
+}
+
+
+/* 投稿一覧 */
+.wp-post-image {
+  width: 100%;
+  height: auto;
+}
+
+.wp-post-title {
+  color: #1d3557;
+}
+
+.wp-post-excerpt {
+  color: #6c757d;
+  font-weight: 400;
+}
+
+.wp-post-date {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+
+/* レスポンシブ */
+@media (min-width: 720px) {
+  .container{
+    padding: 0 50px;
+  }
+}
