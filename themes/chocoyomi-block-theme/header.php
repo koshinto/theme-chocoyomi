@@ -26,5 +26,6 @@
         'theme_location' => 'header-menu'
     ));
     ?>
+    <nav class="sp-nav"><?php get_search_form(); ?></nav>
   </div>
 </header>
