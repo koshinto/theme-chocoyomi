@@ -25,6 +25,8 @@ body {
   overflow: hidden;
 }
 
+
+/* ヘッダー */
 #header-nav { 
   display: flex;
   padding-top: 30px;
@@ -64,6 +66,86 @@ body {
 }
 
 
+/* ヘッダーメニュー */
+.header-menu { padding-bottom: 15px; }
+
+.menu-item { list-style-type: none; }
+
+.menu-item a { 
+  color: #242423; 
+  padding: 10px 30px;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  padding: 5px 0;
+  color: #242423;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.sub-menu > .menu-item {
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.sub-menu > .menu-item:hover { background: rgba(210, 210, 210, 0.9); }
+
+.menu-item-has-children:hover > .sub-menu {
+  display: block;
+}
+
+.menu {
+  text-align: center;
+  padding: 0;
+}
+
+.menu > .menu-item { display: inline-block; }
+
+.menu > .menu-item > a:hover {
+  background: #efefef;
+}
+
+.menu-item-has-chidren {
+  position: relative;
+}
+
+/*
+
+.menu-item-has-chidren:hover { cursor: pointer; }
+
+.menu-item-has-chidren:hover .sub-menu { display: block; }
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 200px;
+  background: white;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+  padding: 0;
+}
+
+.sub-menu > .menu-item:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.sub-menu > .menu-item a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: .5em 0;
+}
+
+.sub-menu > .menu-item a:hover {
+  background: black;
+  color: white;
+}
+ */
 /* 投稿一覧 */
 .wp-post-image {
   width: 100%;
@@ -86,7 +168,7 @@ body {
 
 
 /* レスポンシブ */
-@media (min-width: 720px) {
+@media (min-width: 769px) {
   .container{
     padding: 0 50px;
   }
