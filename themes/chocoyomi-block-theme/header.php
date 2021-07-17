@@ -20,11 +20,11 @@
       <h1 id="logo"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
       <?php get_search_form(); ?>
     </nav>
-      <?php wp_nav_menu(array(
-          'container' => 'nav',
-          'container_class' => 'header-menu',
-          'theme_location' => 'header-menu'
-      ));
-      ?>
+    <?php wp_nav_menu(array(
+        'container' => 'nav',
+        'container_class' => 'header-menu',
+        'theme_location' => 'header-menu'
+    ));
+    ?>
   </div>
 </header>
