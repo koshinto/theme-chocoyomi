@@ -44,6 +44,7 @@ body {
 #header-nav > #header-search-form {
   display: none;
   margin-left: auto;
+  white-space: nowrap;
 }
 
 #header-nav > #header-search-form input[type="search"], #header-search-form button {
@@ -89,7 +90,6 @@ body {
 }
 
 
-
 /* ヘッダーメニュー */
 .header-menu {
   display: block;
@@ -122,7 +122,7 @@ body {
   padding-bottom: 10px;
 }
 
-.sub-menu > .menu-item:hover { background: rgba(210, 210, 210, 0.9); }
+#menu-header-menu .sub-menu > .menu-item:hover { background: rgba(210, 210, 210, 0.9); }
 
 .menu-item-has-children:hover > .sub-menu {
   display: block;
@@ -133,9 +133,12 @@ body {
   padding: 0;
 }
 
-.menu > .menu-item { display: inline-block; }
+#menu-header-menu > .menu-item {
+  display: inline-block;
+  padding: 10px;
+}
 
-.menu > .menu-item > a:hover {
+#menu-header-menu > .menu-item:hover {
   background: #efefef;
 }
 
@@ -165,13 +168,91 @@ body {
 }
 
 
+/* フッター */
+#footer {
+  color: white;
+  background: #242423;
+  padding: 20px 10px;
+}
+
+#footer-blog-name { margin-bottom: 30px; }
+
+#footer #footer-blog-title,
+#footer #footer-blog-description {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#footer-blog-title {
+  font-size: 36px;
+}
+
+#menu-footer-menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#menu-footer-menu > .menu-item {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#menu-footer-menu > .menu-item > a {
+  color: white;
+}
+
+#menu-footer-menu .menu-item > a:hover {
+  background: #40403F;
+}
+
+#footer-share-button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#footer-share-button .share-button {
+  display: block;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+#footer-share-button .share-button li {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#footer-share-button > .share-button > li > a {
+  color: white;
+  font-size: 28px;
+}
+
+#copyright {
+  display: block;
+  text-align: center;
+}
+
+
 /* レスポンシブ */
 @media (min-width: 767px) {
   .container{
     padding: 0 50px;
   }
-
+  
   #header-nav #header-search-form { display: block; }
-
+  
   .sp-nav { display: none; }
+  
+  /* フッター */
+  #footer{
+    padding: 30px 50px 10px 50px;
+  }
+
+  #footer-blog-name { margin-bottom: 50px; }
+
+  #footer-menu { display: inline-block; }
 }
