@@ -67,32 +67,6 @@ body {
   background: #242423;
 }
 
-
-/* #header-nav > #header-search-form {
-  display: none;
-  margin-left: auto;
-  white-space: nowrap;
-}
-
-#header-nav > #header-search-form input[type="search"], #header-search-form button {
-  border: none;
-  font-size: 16px;
-}
-
-#header-nav > #header-search-form input[type="search"] {
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: #EFEFEF;
-  border-radius: 5px 0 0 5px;
-}
-
-#header-nav > #header-search-form button {
-  width: 30px;
-  color: white;
-  background-color: #242423;
-  border-radius: 0 5px 5px 0;
-} */
-
 .sp-nav {
   display: block;
   padding: 15px 0;
@@ -173,23 +147,54 @@ body {
 
 
 /* 投稿一覧 */
+.post {
+  box-sizing: border-box;
+  padding: 5px;
+  vertical-align: top;
+}
+
+.post * {
+  transition-duration: 0.3s;
+}
+
+.post:hover a .wp-post-image {
+  opacity: 0.8;
+}
+
+.post:hover a .wp-post-summary .wp-post-title {
+  color: #e63946;
+}
+
 .wp-post-image {
   width: 100%;
-  height: auto;
+  height: 240px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.wp-post-summary {
+  margin-top: 5px;
+  margin-left: 12px;
+  margin-right: 12px;
+  color: #14213d;
 }
 
 .wp-post-title {
+  margin-bottom: 2px;
   color: #1d3557;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .wp-post-excerpt {
   color: #6c757d;
+  font-size: 10px;
   font-weight: 400;
 }
 
 .wp-post-date {
   color: #6c757d;
-  font-size: 14px;
+  font-size: 10px;
 }
 
 
@@ -267,10 +272,23 @@ body {
   .container{
     padding: 0 50px;
   }
-  
+
+
+  /* ヘッダーナビゲーション */
   #header-nav #header-search-form { display: inline-block; }
   
   .sp-nav { display: none; }
+
+
+  /* 投稿 */
+  .post {
+    display: inline-block;
+    width: calc(98% / 3);
+  }
+  
+  .wp-post-image {
+    height: 160px;
+  }
   
   /* フッター */
   #footer{
@@ -280,4 +298,16 @@ body {
   #footer-blog-name { margin-bottom: 50px; }
 
   #footer-menu { display: inline-block; }
+}
+
+
+@media (min-width: 1023px) {
+  .post {
+    display: inline-block;
+    width: calc(98% / 4);
+  }
+
+  .wp-post-image {
+    height: 160px;
+  }
 }
