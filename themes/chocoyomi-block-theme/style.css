@@ -28,9 +28,14 @@ body {
 
 /* ヘッダーナビゲーション */
 #header-nav { 
-  display: flex;
+  display: block;
+  margin: 0;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+#logo {
+  display: inline-block;
 }
 
 #logo a {
@@ -40,15 +45,36 @@ body {
 }
 
 
-/* 検索フォーム */
+/* 検索フォーム(ヘッダーナビゲーション) */
 #header-nav > #header-search-form {
+  display: none;
+  float: right;
+}
+
+#header-nav > #header-search-form > input[type="search"] {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  background: #efefef;
+  outline: none;
+}
+
+#header-nav > #header-search-form > button {
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  background: #242423;
+}
+
+
+/* #header-nav > #header-search-form {
   display: none;
   margin-left: auto;
   white-space: nowrap;
 }
 
 #header-nav > #header-search-form input[type="search"], #header-search-form button {
-  height: 100%;
   border: none;
   font-size: 16px;
 }
@@ -61,12 +87,11 @@ body {
 }
 
 #header-nav > #header-search-form button {
-  padding-left: 15px;
-  padding-right: 15px;
+  width: 30px;
   color: white;
   background-color: #242423;
   border-radius: 0 5px 5px 0;
-}
+} */
 
 .sp-nav {
   display: block;
@@ -243,7 +268,7 @@ body {
     padding: 0 50px;
   }
   
-  #header-nav #header-search-form { display: block; }
+  #header-nav #header-search-form { display: inline-block; }
   
   .sp-nav { display: none; }
   
