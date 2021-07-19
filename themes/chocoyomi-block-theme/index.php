@@ -30,6 +30,10 @@
     </div>
     <?php else: ?>
     <!-- 投稿一覧表示 -->
+    <div class="sec-title">
+      <p class="color-orange">New Posts</p>
+      <h3>新着記事</h3>
+    </div>
     <?php while(have_posts()): the_post(); ?>
     <article <?php post_class(); ?>>
       <a href="<?php the_permalink(); ?>">
