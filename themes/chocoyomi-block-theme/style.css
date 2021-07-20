@@ -216,6 +216,23 @@ body {
   margin-bottom: 5px;
 }
 
+.pagination {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.pagination a, .pagination .current {
+  padding: 10px 16px;
+  color: #242423;
+  border: 1px solid black;
+}
+
+.pagination a:hover, .pagination .current {
+  color: white;
+  background: #242423;
+}
+
 
 
 /* フッター */
