@@ -11,7 +11,10 @@
         <?php else: ?>
         <img class="wp-post-image no-image" src="<?php echo get_template_directory_uri() ?>/assets/no_image.jpg" alt="noimage">
         <?php endif; ?>
-        <h1><?php echo wp_trim_words(get_the_title(), 24, '...') ?></h1>
+        <div class="wp-post-summary">
+          <h1 class="wp-post-title"><?php echo wp_trim_words(get_the_title(), 36, '...') ?></h1>
+          <time class="wp-post-date"><?php the_date(); ?></time>
+        </div>
       </a>
     </article>
     <?php endwhile; ?>
