@@ -50,8 +50,8 @@ function my_title_reply( $defaults){
 function the_pegination() {
   $args = array(
       'mid_size' => 1,
-      'prev_text' => '&lt;&lt;前へ',
-      'next_text' => '次へ&gt;&gt;',
+      'prev_text' => '<i class="fas fa-arrow-left"></i>',
+      'next_text' => '<i class="fas fa-arrow-right"></i>',
       'screen_reader_text' => ' ',
   );
   the_posts_pagination($args);

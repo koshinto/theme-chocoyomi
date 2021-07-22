@@ -17,7 +17,8 @@ body {
   background-color: #EFEFEF;
 }
 
-.container {
+.container,
+.tribe-common {
   box-sizing: border-box;
   max-width: 1080px;
   margin: 0 auto;
@@ -114,6 +115,7 @@ body {
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  z-index: 100;
 }
 
 .sub-menu > .menu-item {
@@ -177,6 +179,12 @@ body {
   display: inline-block;
   padding: 3px;
   border: 1px solid #6c757d;
+}
+
+#post-meta > .post-categories > li::before {
+  content: "# ";
+  color: #6c757d;
+  font-size: 12px;
 }
 
 #post-meta > .post-categories > li > a {
@@ -260,7 +268,7 @@ body {
 .sec-title {
   margin-top: 5px;
   margin-bottom: 10px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #d5d5d5;
   text-align: center;
 }
 
