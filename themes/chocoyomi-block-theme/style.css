@@ -289,9 +289,14 @@ body {
 }
 
 .pagination a, .pagination .current {
-  padding: 10px 16px;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  text-align: center;
+  line-height: 42px;
   color: #242423;
   border: 1px solid black;
+  transition-duration: 0.3s;
 }
 
 .pagination a:hover, .pagination .current {
@@ -299,6 +304,20 @@ body {
   background: #242423;
 }
 
+.pagination .prev i,
+.pagination .next i {
+  transition-duration: 0;
+}
+
+.pagination .prev:hover i,
+.pagination .next:hover {
+  transform: rotate(45deg);
+}
+
+.pagination .prev:hover,
+.pagination .next:hover i {
+  transform: rotate(-45deg);
+}
 
 
 /* フッター */
