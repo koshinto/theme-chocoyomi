@@ -146,8 +146,42 @@ body {
   background: #efefef;
 }
 
-.menu-item-has-chidren {
-  position: relative;
+.menu-item-has-children > a::after {
+  font-family: 'FontAwesome';
+  content: ' \f0dd';
+  font-size: 20px;
+}
+
+#menu-header-menu > .menu-item {
+  border-bottom: 3px solid gray;
+}
+
+#menu-header-menu > .menu-item:nth-child(1) {
+  border-bottom: 3px solid #f94144;
+}
+
+#menu-header-menu > .menu-item:nth-child(2) {
+  border-bottom: 3px solid #f9844a;
+}
+
+#menu-header-menu > .menu-item:nth-child(3) {
+  border-bottom: 3px solid #f8961e;
+}
+
+#menu-header-menu > .menu-item:nth-child(4) {
+  border-bottom: 3px solid #90be6d;
+}
+
+#menu-header-menu > .menu-item:nth-child(5) {
+  border-bottom: 3px solid #43aa8b;
+}
+
+#menu-header-menu > .menu-item:nth-child(6) {
+  border-bottom: 3px solid #577590;
+}
+
+#menu-header-menu > .menu-item:nth-child(7) {
+  border-bottom: 3px solid #277da1;
 }
 
 /* 記事ページ */
