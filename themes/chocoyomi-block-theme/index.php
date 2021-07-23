@@ -23,9 +23,12 @@
         <section id="author_meta">
           <?php $author_id = get_the_author_id(); ?>
           <p>この記事の著者</p>
-          <h3><?php the_author(); ?></h3>
-          <?php echo get_avatar($author_id, 150); ?>
-          <p><?php the_author_meta('description', $author_id); ?></p>
+          <h3><?php
+            $author = get_userdata($post->post_author);
+            echo $author->nickname;
+          ?></h3>
+          <?php echo get_avatar($author, 150); ?>
+          <p><?php echo $author->description; ?></p>
         </section>
         <div>
           <ul><?php dynamic_sidebar(); ?></ul>
