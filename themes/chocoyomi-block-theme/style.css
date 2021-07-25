@@ -251,48 +251,60 @@ body {
   overflow: hidden;
 }
 
-#entry * {
+#entry > * {
   color: #2b2d42;
 }
 
-#entry h1,
-#entry h2,
-#entry h3,
-#entry h4,
-#entry h5,
-#entry h6 {
+#entry > h1,
+#entry > h2,
+#entry > h3,
+#entry > h4,
+#entry > h5,
+#entry > h6 {
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 5px 10px;
 }
 
-#entry h1 {
+#entry > h1 {
   font-size: 48px;
 }
 
-#entry h2 {
+#entry > h2 {
   font-size: 36px;
-  color: #e63946;
-  border-left: 5px solid #e63946;
-  border-bottom: 1px solid #e63946;
+  color: #b1a7a6;
+  border-top: 3px solid #b1a7a6;
+  border-bottom: 3px solid #b1a7a6;
 }
 
-#entry h3 {
-  color: #e63946;
+#entry > h3 {
+  color: #b1a7a6;
+  background: #f5f3f4;
 }
 
-#entry h6 {
+#entry > h4 {
+  color: #b1a7a6;
+}
+
+#entry > h5 {
+  color: #b1a7a6;
   border-bottom: 1px solid #ededed;
 }
 
-#entry h3,
-#entry h4,
-#entry h5,
-#entry h6 {
+#entry > h6 {
+  color: #b1a7a6;
+  border-bottom: 1px solid #ededed;
+  text-align: center;
+}
+
+#entry > h3,
+#entry > h4,
+#entry > h5,
+#entry > h6 {
   font-size: 24px;
 }
 
-#entry p, #entry a, #entry ul {
+#entry > p, #entry > a, #entry > ul {
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -386,10 +398,6 @@ body {
 
 .post, .post *, .page, .page *, .tribe_events, .tribe_events * {
   transition-duration: 0.3s;
-}
-
-.post:hover, .page:hover {
-  background: #efefef;
 }
 
 .post:hover a .wp-post-image,
