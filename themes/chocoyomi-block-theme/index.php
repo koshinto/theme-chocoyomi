@@ -11,24 +11,22 @@
       </time>
       <?php the_category(); ?>
     </section>
-    <?php if(has_post_thumbnail()): ?>
-    <?php the_post_thumbnail('large'); ?>
-    <?php endif; ?>
+    <div class="post-thumbnail"><?php the_post_thumbnail('large'); ?></div>
     <div id="contents">
-      <article id="content">
+      <section id="entry">
         <?php the_content(); ?>
         <?php comments_template(); ?>
-      </article>
+      </section>
       <section class="sidebar">
-        <section id="author_meta">
-          <?php $author_id = get_the_author_id(); ?>
-          <p>この記事の著者</p>
-          <h3><?php
+        <section id="author-meta">
+          <?php
+            $author_id = get_the_author_id();
             $author = get_userdata($post->post_author);
-            echo $author->nickname;
-          ?></h3>
-          <?php echo get_avatar($author, 150); ?>
-          <p><?php echo $author->description; ?></p>
+          ?>
+          <p class="author-title">この記事の著者</p>
+          <div class="avatar-wrap"><?php echo get_avatar($author, 200); ?></div>
+          <h3 class="author-name"><?php echo $author->nickname; ?></h3>
+          <p class="author-description"><?php echo $author->description; ?></p>
         </section>
         <div>
           <ul><?php dynamic_sidebar(); ?></ul>

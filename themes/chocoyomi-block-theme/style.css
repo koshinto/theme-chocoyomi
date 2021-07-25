@@ -234,12 +234,147 @@ body {
 
 .estimated-reading-time {
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   font-size: 12px;
-  color: #2d1e2f;
-  background: #f7b32b;
+  color: #f7b32b;
+  border-bottom: 1px solid #f7b32b;
   text-align: center;
 }
+
+.post-thumbnail .wp-post-image {
+  width: 100%;
+  height: 100%;
+}
+
+#entry, .sidebar {
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+#entry * {
+  color: #2b2d42;
+}
+
+#entry h1,
+#entry h2,
+#entry h3,
+#entry h4,
+#entry h5,
+#entry h6 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 5px 10px;
+}
+
+#entry h1 {
+  font-size: 48px;
+}
+
+#entry h2 {
+  font-size: 36px;
+  color: #e63946;
+  border-left: 5px solid #e63946;
+  border-bottom: 1px solid #e63946;
+}
+
+#entry h3 {
+  color: #e63946;
+}
+
+#entry h6 {
+  border-bottom: 1px solid #ededed;
+}
+
+#entry h3,
+#entry h4,
+#entry h5,
+#entry h6 {
+  font-size: 24px;
+}
+
+#entry p, #entry a, #entry ul {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#entry a {
+  color: #0077b6;
+}
+
+#entry a:hover {
+  border-bottom: 1px solid #0077b6;
+}
+
+.wp-block-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.wp-block-image figcaption {
+  font-size: 12px;
+  color: gray;
+  text-align: center;
+}
+
+.sidebar ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.widget {
+  margin-bottom: 30px;
+}
+
+.widget li {
+  padding: 10px 5px;
+  border-bottom: 1px solid #efefef;
+  font-size: 14px;
+}
+
+.widget li:hover {
+  background: #efefef;
+}
+
+.widget a {
+  color: #0077b6;
+}
+
+.sidebar .widgettitle {
+  font-size: 12px;
+  font-weight: normal;
+  color: gray;
+  border-bottom: 1px solid #d5d5d5;
+  text-align: center;
+}
+
+#author-meta {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+.avatar-wrap {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.author-title, .author-description {
+  color: gray;
+  font-size: 12px;
+}
+
+.author-title {
+  margin-bottom: 10px;
+  text-align: center;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.author-name {
+  font-family: YuMincho, Yu Mincho, sans-serif;
+  text-align: center;
+}
+
 
 /* 投稿一覧 */
 .post, .page, .tribe_events {
@@ -267,7 +402,7 @@ body {
   color: #e63946;
 }
 
-.wp-post-image {
+.post .wp-post-image {
   width: 100%;
   height: 240px;
   object-fit: cover;
@@ -463,7 +598,7 @@ body {
     width: calc(98% / 3);
   }
   
-  .wp-post-image {
+  .post .wp-post-image {
     height: 160px;
   }
 
@@ -471,15 +606,37 @@ body {
   /* 記事ページ */    
   #contents {
     display: flex;
+    margin-top: 30px;
   }
   
-  #content {
-    flex-basis: 60%;
+  #entry {
+    flex-basis: 70%;
+    padding-right: 20px;
+    overflow: hidden;
+  }
+
+  #entry h1,
+  #entry h2,
+  #entry h3,
+  #entry h4,
+  #entry h5,
+  #entry h6 {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  #entry p, #entry ul {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .author-name {
+    text-align: left;
   }
   
   .sidebar {
-    flex-basis: 40%;
-    padding-left: 40px;
+    flex-basis: 30%;
+    padding-left: 20px;
   }
 
   .estimated-reading-time {
