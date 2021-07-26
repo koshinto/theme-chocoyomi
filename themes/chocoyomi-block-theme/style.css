@@ -232,7 +232,7 @@ body {
   display: block;
 }
 
-.estimated-reading-time {
+#entry .estimated-reading-time {
   margin-top: 10px;
   margin-bottom: 30px;
   font-size: 12px;
@@ -273,8 +273,8 @@ body {
 #entry > h2 {
   font-size: 36px;
   color: #b1a7a6;
-  border-top: 3px solid #b1a7a6;
-  border-bottom: 3px solid #b1a7a6;
+  border-top: 4px double #b1a7a6;
+  border-bottom: 4px double #b1a7a6;
 }
 
 #entry > h3 {
@@ -647,7 +647,7 @@ body {
     padding-left: 20px;
   }
 
-  .estimated-reading-time {
+  #entry .estimated-reading-time {
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 14px;
