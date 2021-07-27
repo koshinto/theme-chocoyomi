@@ -227,6 +227,10 @@ body {
   font-size: 12px;
 }
 
+#post-meta > .post-categories > li > a:hover {
+  border-bottom: 1px solid #6c757d;
+}
+
 
 #contents {
   display: block;
@@ -777,8 +781,16 @@ body {
     text-align: left;
   }
 
+
+  /* コメントフォーム */
   .comment-form .submit {
     width: 200px;
+    transition-duration: 0.3s;
+  }
+
+  .comment-form .submit:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
   
   .sidebar {
