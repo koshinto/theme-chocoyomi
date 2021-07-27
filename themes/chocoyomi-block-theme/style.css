@@ -308,7 +308,7 @@ body {
   font-size: 24px;
 }
 
-#entry > p, #entry > a, #entry > ul, #entry > ol {
+#entry > p, #entry > a, #entry > ul, #entry > ol, #entry table {
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -356,6 +356,19 @@ body {
  
   border-radius: 100%;
   background: #7D7675;
+}
+
+#entry table {
+  border-collapse: collapse;
+  border: 2px solid #242423;
+}
+
+#entry table th, #entry table td {
+  border: 1px solid #242423;
+}
+
+#entry th {
+  background: #efefef;
 }
 
 #entry img {
