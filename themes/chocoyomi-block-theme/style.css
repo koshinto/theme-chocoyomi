@@ -378,6 +378,86 @@ body {
   width: 100%;
 }
 
+/* コメントフォーム */
+#comment-form {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.comment-form {
+  margin-top: 20px;
+}
+
+.comment-form p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.comment-reply-title::before {
+  font-family: 'FontAwesome';
+  content: '\f304';
+  padding-right: 5px;
+}
+
+.comment-form label {
+  display: block;
+}
+
+.form-submit {
+  text-align: center;
+}
+
+.comment-form .submit {
+  width: 100%;
+  height: 40px;
+  color: white;
+  background: #242423;
+  border: none;
+  cursor: pointer;
+}
+
+#comment, #author, #email, #url {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  margin-top: 5px;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 14px;
+  background: #efefef;
+  border: none;
+}
+
+.comment-form-cookies-consent {
+  display: flex;
+}
+
+.comment-form-cookies-consent input[type="checkbox"]::before {
+  display: none;
+  font-size: 16px;
+}
+
+.comment-form-cookies-consent input[type="checkbox"] {
+  font-family: 'FontAwesome';
+  content: '\f0c8';
+}
+
+.comment-form-cookies-consent input[type="checkbox"]:checked {
+  display: block;
+  font-family: 'FontAwesome';
+  content: ' \f14a';
+}
+
+.comment-form-cookies-consent label {
+  padding-left: 10px;
+  font-size: 14px;
+  user-select: none;
+}
+
+.required {
+  color: #f94144;
+}
+
 .sidebar ul {
   padding: 0;
   list-style-type: none;
@@ -678,17 +758,17 @@ body {
     overflow: hidden;
   }
 
-  #entry h1,
-  #entry h2,
-  #entry h3,
-  #entry h4,
-  #entry h5,
-  #entry h6 {
+  #entry > h1,
+  #entry > h2,
+  #entry > h3,
+  #entry > h4,
+  #entry > h5,
+  #entry > h6 {
     margin-top: 40px;
     margin-bottom: 30px;
   }
 
-  #entry p, #entry ul {
+  #entry > p, #entry > ul {
     margin-top: 30px;
     margin-bottom: 20px;
   }
@@ -696,13 +776,17 @@ body {
   .author-name {
     text-align: left;
   }
+
+  .comment-form .submit {
+    width: 200px;
+  }
   
   .sidebar {
     flex-basis: 30%;
     padding-left: 20px;
   }
 
-  #entry .estimated-reading-time {
+  #entry > .estimated-reading-time {
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 14px;
