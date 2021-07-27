@@ -592,6 +592,34 @@ body {
   text-align: center;
 }
 
+#author-content {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 30px 0;
+  padding: 15px;
+  color: #6c757d;
+  border: 1px solid #6c757d;
+}
+
+#author-content > .author-content-avatar img {
+  border-radius: 50%;
+}
+
+#author-content > .author-content-meta {
+  padding-left: 10px;
+}
+
+#author-content > .author-content-meta > .author-content-nickname {
+  font-size: 18px;
+  font-family: YuMincho, Yu Mincho, sans-serif;
+  font-weight: bold;
+}
+
+#author-content > .author-content-meta > .author-content-description {
+  font-size: 12px;
+}
+
 
 /* 投稿一覧 */
 .post, .page, .tribe_events {
@@ -800,6 +828,18 @@ body {
 @media (min-width: 767px) {
   .container{
     padding: 0 50px;
+  }
+
+
+  /* 著者プロフィール */
+  #author-content {
+    width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #author-content > .author-content-meta {
+    padding-left: 20px;
   }
 
 

@@ -3,6 +3,10 @@
 <main>
   <div class="container">
     <?php if(is_single()): ?>
+    <?php
+      $author_id = get_the_author_id();
+      $author = get_userdata($post->post_author);
+    ?>
     <!-- 個別ページ -->
     <h1 id="post-title"><?php the_title(); ?></h1>
     <section id="post-meta">
@@ -14,15 +18,18 @@
     <div class="post-thumbnail"><?php the_post_thumbnail('large'); ?></div>
     <div id="contents">
       <section id="entry">
+        <div id="author-content">
+          <p class="author-content-avatar"><?php echo get_avatar($author, 64); ?></p>
+          <div class="author-content-meta">
+            <p class="author-content-nickname"><?php echo $author->nickname; ?></p>
+            <p class="author-content-description"><?php echo $author->description; ?></p>
+          </div>
+        </div>
         <?php the_content(); ?>
         <?php comments_template(); ?>
       </section>
       <section class="sidebar">
         <section id="author-meta">
-          <?php
-            $author_id = get_the_author_id();
-            $author = get_userdata($post->post_author);
-          ?>
           <p class="author-title">この記事の著者</p>
           <div class="avatar-wrap"><?php echo get_avatar($author, 200); ?></div>
           <h3 class="author-name"><?php echo $author->nickname; ?></h3>
