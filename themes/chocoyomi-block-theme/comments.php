@@ -1,7 +1,7 @@
 <section id="comment-form">
   <?php if(have_comments()): ?>
     <div class="sec-title">
-      <p>Comments</p>
+      <p class="color-red">Comments</p>
       <h2>この記事のコメント</h2>
     </div>
     <ul id="comment-list">

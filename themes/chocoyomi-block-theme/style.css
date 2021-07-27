@@ -792,6 +792,10 @@ body {
   color: #52b788;
 }
 
+.color-red {
+  color: #e63946;
+}
+
 /* レスポンシブ */
 @media (min-width: 767px) {
   .container{
