@@ -401,6 +401,55 @@ body {
   margin-bottom: 50px;
 }
 
+#comment-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#comment-list li {
+  padding: 10px;
+  border-bottom: 1px solid #efefef;
+}
+
+#comment-list li:nth-child(2n) {
+  background: #f7f7f7;
+}
+
+.comment-respond {
+  margin-top: 50px;
+}
+
+.comment-author { display: table; }
+
+.comment-author img {
+  display: table-cell;
+  border-radius: 50%;
+}
+
+.comment-author .fn {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 10px;
+} 
+
+.comment-meta .says {
+  display: none;
+}
+
+.comment-metadata, .comment-content {
+  padding-left: 58px;
+}
+
+.comment-metadata {
+  color: #d5d5d5;
+  font-size: 10px;
+  padding-left: 58px;
+}
+
+.comment-content {
+  margin-top: 10px;
+}
+
 .comment-form {
   margin-top: 20px;
 }
