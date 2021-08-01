@@ -36,7 +36,7 @@ body {
 }
 
 #logo {
-  display: inline-block;
+  display: block;
 }
 
 #logo a {
@@ -71,7 +71,7 @@ body {
 }
 
 #search-form > button {
-  padding: 10px;
+  padding: 15px;
   font-size: 16px;
   color: black;
   background: #efefef;
@@ -81,16 +81,22 @@ body {
 
 .sp-nav {
   display: block;
-  padding: 15px 0;
+  padding: 20px 0;
   text-align: center;
   background: #efefef;
 }
 
+.sp-nav > #search-form {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .sp-nav > #search-form > input[type="search"] {
   display: inline-block;
-  width: 90%;
+  width: 100%;
   font-size: 14px;
-  padding: 10px;
+  padding: 15px;
   background: white;
   border: none;
   border-radius: 5px;
@@ -840,6 +846,10 @@ body {
 @media (min-width: 767px) {
   .container{
     padding: 0 50px;
+  }
+
+  #logo {
+    display: inline-block;
   }
 
 
