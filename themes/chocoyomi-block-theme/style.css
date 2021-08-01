@@ -52,14 +52,17 @@ body {
 
 
 /* 検索フォーム(ヘッダーナビゲーション) */
-#header-nav > #header-search-form {
+#header-nav > #search-form {
   display: none;
-  background: #efefef;
   float: right;
+}
+
+#search-form {
+  background: #efefef;
   outline: solid
 }
 
-#header-nav > #header-search-form > input[type="search"] {
+#search-form > input[type="search"] {
   padding: 10px;
   font-size: 16px;
   border: none;
@@ -67,7 +70,7 @@ body {
   outline: none;
 }
 
-#header-nav > #header-search-form > button {
+#search-form > button {
   padding: 10px;
   font-size: 16px;
   color: black;
@@ -83,7 +86,7 @@ body {
   background: #efefef;
 }
 
-.sp-nav > #header-search-form > input[type="search"] {
+.sp-nav > #search-form > input[type="search"] {
   display: inline-block;
   width: 90%;
   font-size: 14px;
@@ -93,7 +96,7 @@ body {
   border-radius: 5px;
 }
 
-.sp-nav > #header-search-form > button {
+.sp-nav > #search-form > button {
   display: none;
 }
 
@@ -849,7 +852,7 @@ body {
 
 
   /* ヘッダーナビゲーション */
-  #header-nav #header-search-form { display: inline-block; }
+  #header-nav #search-form { display: inline-block; }
   
   .sp-nav { display: none; }
 
