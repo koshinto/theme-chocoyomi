@@ -630,24 +630,28 @@ body {
 
 
 /* 投稿一覧 */
-.post, .page, .tribe_events {
+.posts {
+  padding: 0;
+}
+
+.posts > .post, .posts > .page, .tribe_events {
   box-sizing: border-box;
   margin-bottom: 10px;
   padding: 5px;
   vertical-align: top;
 }
 
-.post, .post *, .page, .page *, .tribe_events, .tribe_events * {
+.posts > .post, .posts > .post *, .posts > .page, .posts > .page *, .tribe_events, .tribe_events * {
   transition-duration: 0.3s;
 }
 
-.post:hover a .wp-post-image,
-.page:hover a .wp-post-image {
+.posts > .post:hover a .wp-post-image,
+.posts > .page:hover a .wp-post-image {
   opacity: 0.8;
 }
 
-.post:hover a .wp-post-summary .wp-post-title,
-.page:hover a .wp-post-summary .wp-post-title {
+.posts > .post:hover a .wp-post-summary .wp-post-title,
+.posts > .page:hover a .wp-post-summary .wp-post-title {
   color: #e63946;
 }
 
@@ -858,13 +862,13 @@ body {
 
 
   /* 投稿 */
-  .post, .page, .tribe_events {
+  .posts > .post, .posts > .page, .tribe_events {
     display: inline-block;
     width: calc(98% / 3);
   }
   
-  .post .wp-post-image {
-    height: 160px;
+  .wp-post-image {
+    max-height: 160px;
   }
 
 
@@ -935,12 +939,8 @@ body {
 
 
 @media (min-width: 1023px) {
-  .post, .page, .tribe_events {
+  .posts > .post, .posts > .page, .tribe_events {
     display: inline-block;
     width: calc(98% / 4);
-  }
-
-  .wp-post-image {
-    height: 160px;
   }
 }

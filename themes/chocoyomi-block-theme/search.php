@@ -2,9 +2,11 @@
 
 <main>
   <div class="container">
+    <?php if(have_posts()): ?>
     <p>「<?php the_search_query() ;?>」の検索結果</p>
-    <?php if(have_posts()): while(have_posts()): the_post(); ?>
-    <article <?php post_class(); ?>>
+    <ul class="posts">
+    <?php while(have_posts()): the_post(); ?>
+    <li <?php post_class(); ?>>
       <a href="<?php the_permalink(); ?>">
         <?php if(has_post_thumbnail()): ?>
         <?php the_post_thumbnail(array(510, 510)); ?>
@@ -16,8 +18,9 @@
           <time class="wp-post-date"><?php the_date(); ?></time>
         </div>
       </a>
-    </article>
+    </li>
     <?php endwhile; ?>
+    </ul>
     <?php else: ?>
     <p>該当する記事が見つかりませんでした。</p>
     <?php endif; ?>
