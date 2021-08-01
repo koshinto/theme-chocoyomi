@@ -17,7 +17,7 @@
 <header>
   <div class="container">
     <nav id="header-nav">
-      <h1 id="logo"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+      <h1 id="logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/logo.svg" width="300" height="104" alt="logo"></a></h1>
       <?php get_search_form(); ?>
     </nav>
     <?php wp_nav_menu(array(
