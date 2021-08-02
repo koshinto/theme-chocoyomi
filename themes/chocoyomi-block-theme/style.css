@@ -115,12 +115,22 @@ body {
   white-space: nowrap;
 }
 
-.menu-item { list-style-type: none; }
-
-.menu-item a { 
-  color: #242423; 
-  padding: 10px 30px;
+.menu-item {
+  list-style-type: none;
+  transition-duration: 0.3s;
 }
+
+.menu-item:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu-item a {
+  display: inline;
+  color: white; 
+  font-weight: bold;
+  padding: 10px 30px;
+} 
+
 
 .sub-menu {
   display: none;
@@ -167,36 +177,44 @@ body {
 }
 
 #menu-header-menu > .menu-item {
-  border-bottom: 3px solid gray;
+  background: gray;
 }
 
 #menu-header-menu > .menu-item:nth-child(1) {
-  border-bottom: 3px solid #f94144;
+  background: #f94144;
+  /* border: 2px solid #f94144; */
 }
 
 #menu-header-menu > .menu-item:nth-child(2) {
-  border-bottom: 3px solid #f9844a;
+  background: #f9844a;
+  /* border: 2px solid #f9844a; */
 }
 
 #menu-header-menu > .menu-item:nth-child(3) {
-  border-bottom: 3px solid #f8961e;
+  background: #f8961e;
+  /* border: 2px solid #f8961e; */
 }
 
 #menu-header-menu > .menu-item:nth-child(4) {
-  border-bottom: 3px solid #90be6d;
+  background: #90be6d;
+  /* border: 2px solid #90be6d; */
 }
 
 #menu-header-menu > .menu-item:nth-child(5) {
-  border-bottom: 3px solid #43aa8b;
+  background: #43aa8b;
+  /* border: 2px solid #43aa8b; */
 }
 
 #menu-header-menu > .menu-item:nth-child(6) {
-  border-bottom: 3px solid #577590;
+  background: #577590;
+  /* border: 2px solid #577590; */
 }
 
 #menu-header-menu > .menu-item:nth-child(7) {
-  border-bottom: 3px solid #277da1;
+  background: #277da1;
+  /* border: 2px solid #277da1; */
 }
+
 
 /* 記事ページ */
 #post-title, #post-meta { 
