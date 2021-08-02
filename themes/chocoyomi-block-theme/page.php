@@ -3,9 +3,11 @@
 <main>
   <div class="container">
     <!-- 固定ページ -->
-    <h1><?php the_title(); ?></h1>
-    <article>
-      <?php the_content(); ?>
+    <article class="pages">
+      <h1 id="page-title"><?php the_title(); ?></h1>
+      <div class="page">
+        <?php the_content(); ?>
+      </div>
     </article>
   </div> 
 </main>
