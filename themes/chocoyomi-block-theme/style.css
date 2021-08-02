@@ -37,12 +37,7 @@ body {
 
 #logo {
   display: block;
-}
-
-#logo a {
-  color: #242423;
-  font-size: 36px;
-  font-weight: bold;
+  text-align: center;
 }
 
 #logo a img {
@@ -110,7 +105,7 @@ body {
 /* ヘッダーメニュー */
 .header-menu {
   display: block;
-  padding-bottom: 15px;
+  padding: 20px 5px 10px 5px;
   overflow-x: auto;
   white-space: nowrap;
 }
@@ -125,7 +120,6 @@ body {
 }
 
 .menu-item a {
-  display: inline;
   color: white; 
   font-weight: bold;
   padding: 10px 30px;
@@ -213,6 +207,11 @@ body {
 #menu-header-menu > .menu-item:nth-child(7) {
   background: #277da1;
   /* border: 2px solid #277da1; */
+}
+
+.manip-support {
+  padding-bottom: 20px;
+  font-family: 'Pacifico', cursive;
 }
 
 
@@ -836,6 +835,15 @@ body {
 
 
 /* Common */
+.center {
+  display: block;
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 .color-orange {
   color: #fb8500;
 }
@@ -868,6 +876,10 @@ body {
 
   #logo {
     display: inline-block;
+  }
+
+  .manip-support {
+    display: none;
   }
 
 

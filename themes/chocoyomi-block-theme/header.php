@@ -21,11 +21,18 @@
       <?php get_search_form(); ?>
     </nav>
     <?php wp_nav_menu(array(
-        'container' => 'nav',
-        'container_class' => 'header-menu',
-        'theme_location' => 'header-menu'
+      'container' => 'nav',
+      'container_class' => 'header-menu',
+      'theme_location' => 'header-menu'
     ));
     ?>
+    <div class="manip-support">
+      <span class="center">
+        <i class="fas fa-arrow-left"></i>
+          Scroll  
+        <i class="fas fa-arrow-right"></i>
+      </span>
+    </div>
     <nav class="sp-nav"><?php get_search_form(); ?></nav>
   </div>
 </header>
