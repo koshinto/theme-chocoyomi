@@ -8,8 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
   <script src="https://kit.fontawesome.com/f2989748a4.js" crossorigin="anonymous"></script>
+  <script src="<?php echo get_template_directory_uri() ?>/dist/js/bundle.js"></script>
   <title><?php bloginfo('name');?> <?php wp_title(); ?></title>
   <?php wp_head(); ?>
 </head>

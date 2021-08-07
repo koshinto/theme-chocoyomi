@@ -5,6 +5,10 @@ Description: This is my Original Theme
 Version: 1.0
 */
 
+
+$black: #242423;
+$required: #f94144;
+
 * { margin: 0; }
 
 a {
@@ -13,7 +17,7 @@ a {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  color: #242423;
+  color: $black;
   background-color: #EFEFEF;
 }
 
@@ -129,7 +133,7 @@ body {
   display: none;
   position: absolute;
   padding: 5px 0;
-  color: #242423;
+  color: $black;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
@@ -420,11 +424,11 @@ body {
 
 #entry table {
   border-collapse: collapse;
-  border: 2px solid #242423;
+  border: 2px solid $black;
 }
 
 #entry table th, #entry table td {
-  border: 1px solid #242423;
+  border: 1px solid $black;
 }
 
 #entry th {
@@ -539,7 +543,7 @@ body {
   width: 100%;
   height: 40px;
   color: white;
-  background: #242423;
+  background: $black;
   border: none;
   cursor: pointer;
 }
@@ -583,14 +587,14 @@ body {
 }
 
 .required {
-  color: #f94144;
+  color: $required;
 }
 
 .comment-awaiting-moderation {
   padding: 3px;
   font-size: 14px;
   color: white;
-  background: #242423;
+  background: $black;
 }
 
 .sidebar ul {
@@ -769,14 +773,14 @@ body {
   height: 42px;
   text-align: center;
   line-height: 42px;
-  color: #242423;
+  color: $black;
   border: 1px solid black;
   transition-duration: 0.3s;
 }
 
 .pagination a:hover, .pagination .current {
   color: white;
-  background: #242423;
+  background: $black;
 }
 
 .pagination .prev i,
@@ -798,7 +802,7 @@ body {
 /* フッター */
 #footer {
   color: white;
-  background: #242423;
+  background: $black;
   padding: 20px 10px;
 }
 
