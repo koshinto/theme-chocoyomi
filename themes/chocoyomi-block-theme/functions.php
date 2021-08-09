@@ -36,7 +36,8 @@ function the_categories() {
 // ナビゲーションメニュー
 register_nav_menus(array(
   'header-menu' => 'Header Menu',
-  'footer-menu' => 'Footer Menu'
+  'footer-menu' => 'Footer Menu',
+  'contact' => 'Contact'
 ));
 
 // コメントのテキストを変更

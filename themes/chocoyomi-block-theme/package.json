@@ -1,7 +1,7 @@
 {
   "name": "chocoyomi-block-theme",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "index.js",
   "license": "UNLICENSED",
   "private": true,
   "scripts": {

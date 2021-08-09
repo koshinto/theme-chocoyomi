@@ -6,8 +6,20 @@ Version: 1.0
 */
 
 
+$main-color: #E5446D;
+$background-header: #FFFFFF;
+$background-body: #F8F8F8;
 $black: #242423;
+$gray: #707070;
 $required: #f94144;
+
+@mixin box-edge($corner: 10px) {
+  border-radius: $corner;
+}
+
+@mixin shadow() {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 
 * { margin: 0; }
 
@@ -16,1005 +28,160 @@ a {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   color: $black;
   background-color: #EFEFEF;
 }
 
-.container,
-.tribe-common {
-  box-sizing: border-box;
-  max-width: 1080px;
+img {
+  max-width: 100%;
+}
+
+.container-m {
+  max-width: 768px;
   margin: 0 auto;
-  background-color: white;
-  overflow: hidden;
 }
 
-
-/* ヘッダーナビゲーション */
-#header-nav { 
-  display: block;
-  margin: 0;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-#logo {
-  display: block;
-  text-align: center;
-}
-
-#logo a img {
-  max-width: 100%;
-  height: auto;
-}
-
-
-/* 検索フォーム(ヘッダーナビゲーション) */
-#header-nav > #search-form {
-  display: none;
-  float: right;
-}
-
-#search-form {
-  background: #efefef;
-  outline: solid
-}
-
-#search-form > input[type="search"] {
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  background: #efefef;
-  outline: none;
-}
-
-#search-form > button {
-  padding: 15px;
-  font-size: 16px;
-  color: black;
-  background: #efefef;
-  border: none;
-  cursor: pointer;
-}
-
-.sp-nav {
-  display: block;
-  padding: 20px 0;
-  text-align: center;
-  background: #efefef;
-}
-
-.sp-nav > #search-form {
-  width: 95%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.sp-nav > #search-form > input[type="search"] {
-  display: inline-block;
-  width: 100%;
-  font-size: 14px;
-  padding: 15px;
-  background: white;
-  border: none;
-  border-radius: 5px;
-}
-
-.sp-nav > #search-form > button {
-  display: none;
-}
-
-
-/* ヘッダーメニュー */
-.header-menu {
-  display: block;
-  padding: 20px 5px 10px 5px;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.menu-item {
-  list-style-type: none;
-  transition-duration: 0.3s;
-}
-
-.menu-item a {
-  color: white; 
-  font-weight: bold;
-  padding: 10px 30px;
-} 
-
-.header-menu .menu-item:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.sub-menu {
-  display: none;
-  position: absolute;
-  padding: 5px 0;
-  color: $black;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-  z-index: 100;
-}
-
-.sub-menu > .menu-item {
-  width: 100%;
-  height: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-#menu-header-menu .sub-menu > .menu-item:hover { background: rgba(210, 210, 210, 0.9); }
-
-.menu-item-has-children:hover > .sub-menu {
-  display: block;
-}
-
-.menu {
-  text-align: center;
-  padding: 0;
-}
-
-#menu-header-menu > .menu-item {
-  display: inline-block;
-  padding: 10px;
-}
-
-#menu-header-menu > .menu-item:hover {
-  background: #efefef;
-}
-
-.menu-item-has-children > a::after {
-  font-family: 'FontAwesome';
-  content: ' \f0dd';
-  font-size: 20px;
-}
-
-#menu-header-menu > .menu-item {
-  background: gray;
-}
-
-#menu-header-menu > .menu-item:nth-child(1) {
-  background: #f94144;
-  /* border: 2px solid #f94144; */
-}
-
-#menu-header-menu > .menu-item:nth-child(2) {
-  background: #f9844a;
-  /* border: 2px solid #f9844a; */
-}
-
-#menu-header-menu > .menu-item:nth-child(3) {
-  background: #f8961e;
-  /* border: 2px solid #f8961e; */
-}
-
-#menu-header-menu > .menu-item:nth-child(4) {
-  background: #90be6d;
-  /* border: 2px solid #90be6d; */
-}
-
-#menu-header-menu > .menu-item:nth-child(5) {
-  background: #43aa8b;
-  /* border: 2px solid #43aa8b; */
-}
-
-#menu-header-menu > .menu-item:nth-child(6) {
-  background: #577590;
-  /* border: 2px solid #577590; */
-}
-
-#menu-header-menu > .menu-item:nth-child(7) {
-  background: #277da1;
-  /* border: 2px solid #277da1; */
-}
-
-.manip-support {
-  padding-bottom: 20px;
-  font-family: 'Pacifico', cursive;
-}
-
-
-/* 記事ページ */
-#post-title,
-#post-meta,
-#page-title { 
-  text-align: center;
-}
-
-#post-title, #page-title {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  font-family: YuMincho, Yu Mincho, sans-serif;
-}
-
-#post-meta {
-  margin-bottom: 30px;
-}
-
-#post-meta > time {
-  font-size: 14px;
-  color: #6c757d;
-}
-
-#post-meta > .post-categories {
-  margin-top: 5px;
-  padding: 0;
-  list-style-type: none;
-}  
-
-#post-meta > .post-categories > li {
-  display: inline-block;
-  padding: 3px;
-  border: 1px solid #6c757d;
-}
-
-#post-meta > .post-categories > li::before {
-  content: "# ";
-  color: #6c757d;
-  font-size: 12px;
-}
-
-#post-meta > .post-categories > li > a {
-  color: #6c757d;
-  font-size: 12px;
-}
-
-#post-meta > .post-categories > li > a:hover {
-  border-bottom: 1px solid #6c757d;
-}
-
-
-#contents {
-  display: block;
-}
-
-#entry .estimated-reading-time {
-  margin-top: 10px;
-  margin-bottom: 30px;
-  font-size: 12px;
-  color: #f7b32b;
-  border-bottom: 1px solid #f7b32b;
-  text-align: center;
-}
-
-.post-thumbnail .wp-post-image {
-  width: 100%;
-  height: auto;
-}
-
-#entry, .sidebar {
-  padding: 0 10px;
-  overflow: hidden;
-}
-
-#entry > *,
-.pages > * {
-  color: #2b2d42;
-}
-
-.pages {
-  font-family: YuMincho, Yu Mincho, sans-serif;
-  margin: 70px 0;
-}
-
-
-#entry > h1,
-#entry > h2,
-#entry > h3,
-#entry > h4,
-#entry > h5,
-#entry > h6,
-.page h1,
-.page h2,
-.page h3,
-.page h4,
-.page h5,
-.page h6 {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding: 5px 10px;
-}
-
-#entry > h1,
-#page-title {
-  font-size: 48px;
-}
-
-#entry > h2 {
-  font-size: 36px;
-  color: #b1a7a6;
-  border-top: 4px double #b1a7a6;
-  border-bottom: 4px double #b1a7a6;
-}
-
-#entry > h3 {
-  color: #b1a7a6;
-  background: #f5f3f4;
-}
-
-#entry > h4 {
-  color: #b1a7a6;
-}
-
-#entry > h5 {
-  color: #b1a7a6;
-  border-bottom: 1px solid #ededed;
-}
-
-#entry > h6 {
-  color: #b1a7a6;
-  border-bottom: 1px solid #ededed;
-  text-align: center;
-}
-
-#entry > h3,
-#entry > h4,
-#entry > h5,
-#entry > h6 {
-  font-size: 24px;
-}
-
-#entry > p, #entry > a, #entry > ul, #entry > ol, #entry table,
-.pages p, .pages a, .pages ul, .pages ol, .pages table {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-#entry a,
-.pages a {
-  color: #0077b6;
-}
-
-#entry a:hover,
-.pages a:hover {
-  border-bottom: 1px solid #0077b6;
-}
-
-#entry > ul, #entry > ol,
-.pages ul, .pages ol {
-  padding: 15px 40px;
-  color: #7D7675;
-  background: #f5f3f4;
-  border: 2px solid #b1a7a6;
-}
-
-#entry > ol li {
-  padding-left: 10px;
-}
-
-.pages ol {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#entry > ul li,
-#entry > ol li,
-.page > ul li,
-.page > ol li {
-  margin-bottom: 10px;
-}
-
-#entry > ul li:last-child,
-#entry > ol li:last-child,
-.page > ul li:last-child,
-.page > ol li:last-child {
-  margin-bottom: 0;
-}
-
-#entry > ul li::before {
-  position: relative;
-  top: -2px;
-  left: -18px;
- 
-  display: inline-block;
- 
-  width: 8px;
-  height: 8px;
- 
-  content: '';
- 
-  border-radius: 100%;
-  background: #7D7675;
-}
-
-#entry table {
-  border-collapse: collapse;
-  border: 2px solid $black;
-}
-
-#entry table th, #entry table td {
-  border: 1px solid $black;
-}
-
-#entry th {
-  background: #efefef;
-}
-
-#entry img {
-  height: auto;
-}
-
-.wp-block-image {
-  display: block;
-  overflow: hidden;
-}
-
-.wp-block-image figcaption {
-  font-size: 12px;
-  color: gray;
-  text-align: center;
-}
-
-.alignnone {
-  display: block;
-  max-width: 100%;
-}
-
-.alignnone img {
-  width: 100%;
-}
-
-/* コメントフォーム */
-#comment-form {
-  display: block;
-  width: 100%;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-#comment-list {
-  list-style-type: none;
-  padding: 0;
-}
-
-#comment-list li {
-  padding: 10px;
-  border-bottom: 1px solid #efefef;
-}
-
-#comment-list li:nth-child(2n) {
-  background: #f7f7f7;
-}
-
-.comment-respond {
-  margin-top: 50px;
-}
-
-.comment-author { display: table; }
-
-.comment-author img {
-  display: table-cell;
-  border-radius: 50%;
-}
-
-.comment-author .fn {
-  display: table-cell;
-  vertical-align: middle;
-  padding-left: 10px;
-} 
-
-.comment-meta .says {
-  display: none;
-}
-
-.comment-metadata, .comment-content {
-  padding-left: 58px;
-}
-
-.comment-metadata {
-  color: #d5d5d5;
-  font-size: 12px;
-  padding-left: 58px;
-}
-
-.comment-content {
-  margin-top: 10px;
-}
-
-.comment-form {
-  margin-top: 20px;
-}
-
-.comment-form p {
-  margin-top: 10px;
-  margin-bottom: 20px;
+.container-l {
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
-.comment-reply-title::before {
-  font-family: 'FontAwesome';
-  content: '\f304';
+.fas {
   padding-right: 5px;
 }
 
-.comment-form label {
-  display: block;
+.modal {
+  background-color: white;
+  @include box-edge();
+
+  .modal-title {
+    text-align: center;
+    margin-bottom: 15px;
+  }
 }
 
-.form-submit {
-  text-align: center;
-}
-
-.comment-form .submit {
-  width: 100%;
-  height: 40px;
-  color: white;
+.bg-black {
   background: $black;
-  border: none;
-  cursor: pointer;
 }
 
-#comment, #author, #email, #url {
-  width: 100%;
-  max-width: 100%;
-  min-width: 100%;
-  margin-top: 5px;
-  box-sizing: border-box;
-  padding: 10px;
-  font-size: 14px;
-  background: #efefef;
-  border: none;
-}
-
-.comment-form-cookies-consent {
-  display: flex;
-}
-
-.comment-form-cookies-consent input[type="checkbox"]::before {
+.hidden {
   display: none;
-  font-size: 16px;
 }
 
-.comment-form-cookies-consent input[type="checkbox"] {
-  font-family: 'FontAwesome';
-  content: '\f0c8';
-}
-
-.comment-form-cookies-consent input[type="checkbox"]:checked {
-  display: block;
-  font-family: 'FontAwesome';
-  content: ' \f14a';
-}
-
-.comment-form-cookies-consent label {
-  padding-left: 10px;
-  font-size: 14px;
-  user-select: none;
-}
-
-.required {
-  color: $required;
-}
-
-.comment-awaiting-moderation {
-  padding: 3px;
-  font-size: 14px;
-  color: white;
-  background: $black;
-}
-
-.sidebar ul {
-  padding: 0;
-  list-style-type: none;
-}
-
-.widget {
-  margin-bottom: 30px;
-}
-
-.widget li {
-  padding: 10px 5px;
-  border-bottom: 1px solid #efefef;
-  font-size: 14px;
-}
-
-.widget li:hover {
-  background: #efefef;
-}
-
-.widget a {
-  color: #0077b6;
-}
-
-.sidebar .widgettitle {
-  font-size: 12px;
-  font-weight: normal;
-  color: gray;
-  border-bottom: 1px solid #d5d5d5;
-  text-align: center;
-}
-
-#author-meta {
-  display: block;
-  box-sizing: border-box;
-  margin-bottom: 30px;
-  padding: 0 10px;
-}
-
-.avatar-wrap {
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.author-title, .author-description {
-  color: gray;
-  font-size: 12px;
-}
-
-.author-title {
-  margin-bottom: 10px;
-  text-align: center;
-  border-bottom: 1px solid #d5d5d5;
-}
-
-.author-name {
-  font-family: YuMincho, Yu Mincho, sans-serif;
-  text-align: center;
-}
-
-#author-content {
-  display: flex;
-  box-sizing: border-box;
-  width: 100%;
-  margin: 30px 0;
-  padding: 15px;
-  color: #6c757d;
-  border: 1px solid #6c757d;
-}
-
-#author-content > .author-content-avatar img {
-  border-radius: 50%;
-}
-
-#author-content > .author-content-meta {
-  padding-left: 10px;
-}
-
-#author-content > .author-content-meta > .author-content-nickname {
-  font-size: 18px;
-  font-family: YuMincho, Yu Mincho, sans-serif;
-  font-weight: bold;
-}
-
-#author-content > .author-content-meta > .author-content-description {
-  font-size: 12px;
-}
-
-
-/* 投稿一覧 */
-.posts {
-  padding: 0;
-}
-
-.posts > .post, .pages > .page, .tribe_events {
-  box-sizing: border-box;
-  margin-bottom: 10px;
-  padding: 5px;
-  vertical-align: top;
-}
-
-.posts > .post, .posts > .post *, .pages > .page, .pages > .page *, .tribe_events, .tribe_events * {
-  transition-duration: 0.3s;
-}
-
-.posts > .post:hover a .wp-post-image,
-.pages > .page:hover a .wp-post-image {
-  opacity: 0.8;
-}
-
-.posts > .post:hover a .wp-post-summary .wp-post-title,
-.pages > .page:hover a .wp-post-summary .wp-post-title {
-  color: #e63946;
-}
-
-.post .wp-post-image,
-.page .wp-post-image {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  overflow: hidden;
-}
-
-.wp-post-summary {
-  margin-top: 5px;
-  margin-left: 12px;
-  margin-right: 12px;
-  color: #14213d;
-}
-
-.wp-post-title {
-  margin-bottom: 2px;
-  color: #1d3557;
-  font-size: 14px;
-  line-height: 16px;
-  word-wrap: break-word;
-}
-
-.wp-post-excerpt {
-  color: #6c757d;
-  font-size: 10px;
-  font-weight: 400;
-}
-
-.wp-post-date {
-  color: #6c757d;
-  font-size: 10px;
-}
-
-.sec-title {
-  margin-top: 30px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #d5d5d5;
-  text-align: center;
-}
-
-.sec-title > p {
-  margin-bottom: 5px;
-  font-size: 12px;
-}
-
-.sec-title > h3 {
-  margin-bottom: 5px;
-}
-
-.pagination {
-  margin-top: 20px;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.pagination a, .pagination .current {
-  display: inline-block;
-  width: 42px;
-  height: 42px;
-  text-align: center;
-  line-height: 42px;
-  color: $black;
-  border: 1px solid black;
-  transition-duration: 0.3s;
-}
-
-.pagination a:hover, .pagination .current {
-  color: white;
-  background: $black;
-}
-
-.pagination .prev i,
-.pagination .next i {
-  transition-duration: 0;
-}
-
-.pagination .prev:hover i,
-.pagination .next:hover {
-  transform: rotate(45deg);
-}
-
-.pagination .prev:hover,
-.pagination .next:hover i {
-  transform: rotate(-45deg);
-}
-
-
-/* フッター */
-#footer {
-  color: white;
-  background: $black;
-  padding: 20px 10px;
-}
-
-#footer-blog-name { margin-bottom: 30px; }
-
-#footer #footer-blog-title,
-#footer #footer-blog-description {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-#footer-blog-title {
-  font-size: 36px;
-}
-
-#menu-footer-menu {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-#menu-footer-menu > .menu-item {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-#menu-footer-menu > .menu-item > a {
-  color: white;
-}
-
-#menu-footer-menu .menu-item > a:hover {
-  background: #40403F;
-}
-
-#footer-share-button {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-#footer-share-button .share-button {
-  display: block;
-  list-style-type: none;
-  padding: 0;
-  text-align: center;
-}
-
-#footer-share-button .share-button li {
-  display: inline-block;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-#footer-share-button > .share-button > li > a {
-  color: white;
-  font-size: 28px;
-}
-
-#copyright {
-  display: block;
-  text-align: center;
-}
-
-
-/* Common */
-.center {
-  display: block;
-  text-align: center;
-}
-
-.bold {
-  font-weight: bold;
-}
-
-.color-orange {
-  color: #fb8500;
-}
-
-.color-yellow {
-  color: #ffb703;
-}
-
-.color-blue {
-  color: #023047;
-}
-
-.color-pale-blue {
-  color: #8ecae6;
-}
-
-.color-green {
-  color: #52b788;
-}
-
-.color-red {
-  color: #e63946;
-}
-
-/* レスポンシブ */
-@media (min-width: 767px) {
-  .container{
-    padding: 0 50px;
-  }
-
-  #logo {
-    display: inline-block;
-  }
-
-  .manip-support {
+header {
+  background-color: white;
+  
+  #pc-nav-bar {
+    // 768px以上で表示する
     display: none;
-  }
 
+    #pc-nav-bar-content {
+      display: flex;
+      padding: 5px 0;
 
-  /* 著者プロフィール */
-  #author-content {
-    width: 420px;
-    margin-left: auto;
-    margin-right: auto;
+      .openSearchFieldButton {
+        color: white;
+        background-color: inherit;
+        border: none;
+        font-size: 14px;
+        font-weight: 300;
+        cursor: pointer;
+      }
+
+      .contact {
+        margin-left: auto;
+
+        #menu-contact {
+          padding: 0;
+          display: flex;
+          flex-direction: row;
+          gap: 10px 15px;
+          list-style: none;
+
+          li {
+            a {
+              color: white;
+              font-size: 14px;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }    
   }
   
-  #author-content > .author-content-meta {
-    padding-left: 20px;
-  }
-
-
-  /* ヘッダーナビゲーション */
-  #header-nav #search-form { display: inline-block; }
-  
-  .sp-nav { display: none; }
-
-
-  /* 投稿 */
-  .posts > .post, .posts > .page, .tribe_events {
-    display: inline-block;
-    width: calc(98% / 3);
-  }
-  
-  .posts .wp-post-image {
-    max-height: 160px;
-  }
-
-
-  /* 記事ページ */    
-  #contents {
+  #header-nav {
     display: flex;
-    margin-top: 30px;
+
+    .sp-SearchFieldButton {
+      margin-left: 20px;
+      margin-right: 10px;
+      font-size: 36px;
+      border: none;
+      background-color: inherit;
+    }
+
+    #logo {
+      width: 240px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   
-  #entry {
-    flex-basis: 70%;
-    padding-right: 20px;
-    overflow: hidden;
-  }
+  #searchfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: $gray, $alpha: 0.9);
 
-  #entry > h1,
-  #entry > h2,
-  #entry > h3,
-  #entry > h4,
-  #entry > h5,
-  #entry > h6 {
-    margin-top: 40px;
-    margin-bottom: 30px;
-  }
+    .modal {
+      position: absolute;
+      margin: 0;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .searchfield-inner {
+      padding: 30px;
 
-  #entry > p, #entry > ul {
-    margin-top: 30px;
-    margin-bottom: 20px;
-  }
+      #search-form {
+        input, button {
+          display: block;
+          width: 100%;
+          font-size: 16px;
+        }
 
-  .author-name {
-    text-align: left;
-  }
+        input {
+          padding: 10px 15px;
+          margin-bottom: 10px;
+          border: 3px solid black;
+          outline: none;
+        }
 
+        button {
+          margin-bottom: 50px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          color: white;
+          background-color: black;
+          border: none;
+        }
+      }
 
-  /* コメントフォーム */
-  .comment-form .submit {
-    width: 200px;
-    transition-duration: 0.3s;
-  }
-
-  .comment-form .submit:hover {
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  .sidebar {
-    flex-basis: 30%;
-    padding-left: 20px;
-  }
-
-  #entry > .estimated-reading-time {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 14px;
-  }  
-  
-  
-  /* フッター */
-  #footer{
-    padding: 30px 50px 10px 50px;
-  }
-
-  #footer-blog-name { margin-bottom: 50px; }
-
-  #footer-menu { display: inline-block; }
-}
-
-
-@media (min-width: 1023px) {
-  .posts > .post, .posts > .page, .tribe_events {
-    display: inline-block;
-    width: calc(98% / 4);
+      #searchfieldclose {
+        display: block;
+        width: 100%;
+        font-size: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+    }
   }
 }

@@ -3,10 +3,13 @@ const outpath = path.join(__dirname, 'dist', 'js');
 
 module.exports = {
   mode: 'development',
-  entry: './main.js',
+  entry: {
+    style: './style.js',
+    index: './index.js'
+  },
   output: {
     path: outpath,
-    filename: 'bundle.js'
+    filename: '[name].bundle.js'
   },
   module: {
     rules: [
