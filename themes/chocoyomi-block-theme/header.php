@@ -39,7 +39,7 @@
     ));
     ?>
   <div id="searchfield" class="hidden">
-    <div class="modal">
+    <div class="modal searchfield-modal">
       <div class="searchfield-inner">
         <h3 class="modal-title">キーワードから記事を検索</h3>
         <?php get_search_form(); ?>
