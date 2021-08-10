@@ -32,12 +32,17 @@
       <button class="openSearchFieldButton sp-SearchFieldButton"><i class="fas fa-bars"></i></button>
       <h1 id="logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/logo.svg" width="300" height="104" alt="logo"></a></h1>
     </nav>
-    <?php wp_nav_menu(array(
-      'container' => 'nav',
-      'container_class' => 'header-menu',
-      'theme_location' => 'header-menu'
-    ));
-    ?>
+    <section id="category" class="container-sp">
+      <p class="section-subtitle left">カテゴリー</p>
+      <h2 class="section-title left">Category</h2>
+      <?php wp_nav_menu(array(
+        'container' => 'nav',
+        'container_class' => 'categories',
+        'theme_location' => 'categories'
+      ));
+      ?>
+    </section>
+  </div>
   <div id="searchfield" class="hidden">
     <div class="modal searchfield-modal">
       <div class="searchfield-inner">

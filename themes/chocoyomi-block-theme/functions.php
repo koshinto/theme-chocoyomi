@@ -35,7 +35,7 @@ function the_categories() {
 
 // ナビゲーションメニュー
 register_nav_menus(array(
-  'header-menu' => 'Header Menu',
+  'categories' => 'Categories',
   'footer-menu' => 'Footer Menu',
   'contact' => 'Contact'
 ));
