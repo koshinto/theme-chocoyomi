@@ -207,6 +207,14 @@ header {
       .menu-item-has-children:hover .sub-menu {
         display: block;
       }
+
+      .menu-item-has-children {
+          > a::after {
+          font-family: FontAwesome;
+          content: "\f0d7";
+          padding-left: 5px;
+        }
+      }
     }
   }
   
