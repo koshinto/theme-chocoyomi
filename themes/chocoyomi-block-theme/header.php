@@ -17,7 +17,7 @@
 <body <?php body_class(); ?>>
 <header>
   <div id="pc-nav-bar" class="bg-black">
-    <div id="pc-nav-bar-content" class="container-m">
+    <div id="pc-nav-bar-content" class="container container-m">
       <button class="openSearchFieldButton"><i class="fas fa-search"></i>キーワードから記事を検索</button>
       <?php wp_nav_menu(array(
           'container' => 'nav',
@@ -27,7 +27,7 @@
       ?>
     </div>
   </div>
-  <div class="container-m">
+  <div class="container">
     <nav id="header-nav">
       <button class="openSearchFieldButton sp-SearchFieldButton"><i class="fas fa-bars"></i></button>
       <h1 id="logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/logo.svg" width="300" height="104" alt="logo"></a></h1>
