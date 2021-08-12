@@ -29,8 +29,8 @@
   </div>
   <div class="container">
     <nav id="header-nav">
-      <button class="openSearchFieldButton sp-SearchFieldButton"><i class="fas fa-bars"></i></button>
       <h1 id="logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/logo.svg" width="300" height="104" alt="logo"></a></h1>
+      <button class="openSearchFieldButton sp-SearchFieldButton"><i class="fas fa-bars"></i></button>
     </nav>
     <section id="category" class="container-sp">
       <p class="section-subtitle left">カテゴリー</p>
