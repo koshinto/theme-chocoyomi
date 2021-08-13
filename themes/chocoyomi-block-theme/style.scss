@@ -298,6 +298,11 @@ main {
   * {
     line-height: 2;
   }
+
+  #contents {
+    display: flex;
+    flex-direction: column;
+  }
   
   .posts {
     padding: 0;
@@ -368,7 +373,7 @@ main {
       }
     }
 
-    #contents {
+    #contents {  
       #entry {
         margin-bottom: 60px;
 
@@ -550,6 +555,11 @@ main {
   }
 
   main {
+    #contents {
+      display: flex;
+      flex-direction: row;
+    }
+
     .posts {
       .post {
         .post-columns {
