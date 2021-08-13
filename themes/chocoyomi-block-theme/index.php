@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main>
-  <div class="single container container-sp">
+  <div class="single container container-sp container-l">
     <?php if(is_single()): ?>
     <?php
       $author_id = get_the_author_id();

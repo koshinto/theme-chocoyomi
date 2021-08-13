@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main>
-  <div class="container">
+  <div class="container container-sp container-l">
   <?php if(have_posts()): ?>
     <div class="title">
       <span class="section-subtitle">Search</span>

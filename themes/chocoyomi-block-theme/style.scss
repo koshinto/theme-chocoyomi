@@ -511,6 +511,7 @@ main {
               margin-bottom: 5px;
               font-size: 1.5em;
               line-height: 1.2;
+              word-break: break-all;
             }
           }
         }
@@ -588,8 +589,10 @@ main {
   }
   
   .container-l {
+    box-sizing: border-box;
     max-width: 1024px;
     margin: 0 auto;
+    padding: 0 30px;
   }
 
   header {
