@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main>
-  <div class="container container-sp">
+  <div class="single container container-sp">
     <?php if(is_single()): ?>
     <?php
       $author_id = get_the_author_id();
@@ -17,34 +17,34 @@
     </section>
     <div class="post-thumbnail"><?php the_post_thumbnail('large'); ?></div>
     <div id="contents">
-      <section id="entry">
-        <div id="author-content">
-          <p class="author-content-avatar"><?php echo get_avatar($author, 64); ?></p>
-          <div class="author-content-meta">
-            <p class="author-content-nickname"><?php echo $author->nickname; ?></p>
-            <p class="author-content-description"><?php echo $author->description; ?></p>
+      <div class="content">
+        <section id="entry">
+          <?php the_content(); ?>
+        </section>
+        <div id="author-meta">
+          <span class="section-subtitle">この記事を書いた人</span>
+          <h2 class="section-title">Written By</h2>
+          <div class="author-avatar"><?php echo get_avatar($author, 350); ?></div>
+          <div class="author-content">
+            <h2 class="author-nickname"><?php echo $author->nickname; ?></h2>
+            <p class="author-description"><?php echo $author->description; ?></p>
           </div>
         </div>
-        <?php the_content(); ?>
         <?php comments_template(); ?>
-      </section>
+      </div>
+
       <section class="sidebar">
-        <section id="author-meta">
-          <p class="author-title">この記事の著者</p>
-          <div class="avatar-wrap"><?php echo get_avatar($author, 200); ?></div>
-          <h3 class="author-name"><?php echo $author->nickname; ?></h3>
-          <p class="author-description"><?php echo $author->description; ?></p>
-        </section>
         <div>
           <ul><?php dynamic_sidebar(); ?></ul>
         </div>
       </section>
     </div>
+    
     <?php else: ?>
     <!-- 投稿一覧表示 -->
     <?php if(have_posts()): ?>
     <div class="title">
-      <p class="section-subtitle">新着記事</p>
+      <span class="section-subtitle">新着記事</span>
       <h2 class="section-title">Recent Posts</h2>
     </div>
     <ul class="posts">
