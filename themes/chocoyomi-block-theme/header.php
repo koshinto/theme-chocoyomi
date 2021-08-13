@@ -33,8 +33,8 @@
       <button class="openSearchFieldButton sp-SearchFieldButton"><i class="fas fa-bars"></i></button>
     </nav>
     <section id="category" class="container-sp">
-      <p class="section-subtitle left">カテゴリー</p>
-      <h2 class="section-title left">Category</h2>
+      <p class="section-subtitle left">Category</p>
+      <h2 class="section-title left">カテゴリー</h2>
       <?php wp_nav_menu(array(
         'container' => 'nav',
         'container_class' => 'categories',

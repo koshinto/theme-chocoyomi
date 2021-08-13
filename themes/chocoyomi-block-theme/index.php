@@ -22,8 +22,8 @@
           <?php the_content(); ?>
         </section>
         <div id="author-meta">
-          <span class="section-subtitle">この記事を書いた人</span>
-          <h2 class="section-title">Written By</h2>
+          <span class="section-subtitle">Written By</span>
+          <h2 class="section-title">この記事を書いた人</h2>
           <div class="author-avatar"><?php echo get_avatar($author, 350); ?></div>
           <div class="author-content">
             <h2 class="author-nickname"><?php echo $author->nickname; ?></h2>
@@ -44,8 +44,8 @@
     <!-- 投稿一覧表示 -->
     <?php if(have_posts()): ?>
     <div class="title">
-      <span class="section-subtitle">新着記事</span>
-      <h2 class="section-title">Recent Posts</h2>
+      <span class="section-subtitle">Recent Posts</span>
+      <h2 class="section-title">新着記事</h2>
     </div>
     <ul class="posts">
     <?php while(have_posts()): the_post(); ?>
