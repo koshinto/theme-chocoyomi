@@ -546,6 +546,64 @@ main {
   }
 }
 
+footer {
+  background: $black;
+  color: white;
+  padding-top: 30px;
+
+  a {
+    color: white;
+  }
+  
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  #footer-blog-name {
+    text-align: center;
+  }
+
+  .footer-menu {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    #menu-footer-menu {
+      .menu-item {
+        text-align: center;
+
+        a {
+          display: block;
+          padding: 5px 0;
+        }
+
+        a:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  .share-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    li {
+      a {
+        display: block;
+        font-size: 2.5em;
+        padding: 5px 10px;
+      }
+    }
+  }
+
+  #copyright {
+    display: block;
+    text-align: center;
+  }
+}
+
 
 // メディアクエリ
 @media screen and (min-width: 320px) and (max-width: 767px) {
