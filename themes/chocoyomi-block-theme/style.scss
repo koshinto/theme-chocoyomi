@@ -327,7 +327,7 @@ main {
         .wp-post-image {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: fill;
           @include box-edge();
           @include shadow-bold();
         }
@@ -340,6 +340,8 @@ main {
           }
 
           .wp-post-title {
+            font-size: 1.5em;
+            line-height: 1.5;
             word-break: break-all;
           }
         }
@@ -534,23 +536,7 @@ main {
         .post-columns {
             width: 90%;
 
-          .wp-post-image-wrap::before {
-            content: "";
-            display: block;
-            padding-top: 100%;
-          }
-          
-          .wp-post-image-wrap {
-            position: relative;
-            width: 100%;
-            
-            .wp-post-image {
-              position: absolute;
-              top: 0;
-            }
-          }
-          
-          .wp-post-summary {
+            .wp-post-summary {
             margin: 15px;
 
             .wp-post-title {
@@ -597,6 +583,8 @@ main {
   main {
     #contents {
       display: flex;
+      // ページのレイアウト
+      //　タブレット以上のサイズでは2カラムレイアウト
       flex-direction: row;
 
       .content {
@@ -613,18 +601,17 @@ main {
     .posts {
       .post {
         .post-columns {
-          flex-direction: row;
+          // 投稿の並び
+          flex-direction: column;
 
           .wp-post-image-wrap {
             display: inline-block;
-            height: 250px;
             flex-shrink: 0;
+            text-align: center;
             
             .wp-post-image {
               position: relative;
               display: inline-block;
-              width: 250px;
-              height: 100%;
             }
           }
       
@@ -634,7 +621,7 @@ main {
             flex-grow: 1;
 
             .wp-post-title {
-              margin-bottom: 15px;
+              margin-top: 5px;
             }
           }
         }
