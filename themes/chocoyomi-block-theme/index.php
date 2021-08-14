@@ -64,6 +64,7 @@
         </a>
       </li>
       <?php endwhile; ?>
+      <?php the_pegination(); ?>      
       </ul>
       <section class="sidebar">
         <ul><?php dynamic_sidebar(); ?></ul>
@@ -71,7 +72,6 @@
     </div>
     <?php endif; ?>
 
-    <?php the_pegination(); ?>      
     <?php endif; ?>
 
     <?php
@@ -82,10 +82,8 @@
       $query = new WP_Query($args);
       if($query->have_posts()):
     ?>
-    <div class="sec-title">
-      <p class="color-blue">Recommended by Editorial</p>
-      <h3>編集部のおすすめ</h3>
-    </div>
+    <span class="section-subtitle">Recommended by Editorial</span>
+    <h3 class="section-title">編集部のおすすめ</h3>
     <?php while($query->have_posts()): $query->the_post(); ?>
     <article <?php post_class(); ?>>
       <a href="<?php the_permalink(); ?>">
