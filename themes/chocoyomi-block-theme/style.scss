@@ -338,6 +338,10 @@ main {
             color: $gray;
             text-align: right;
           }
+
+          .wp-post-title {
+            word-break: break-all;
+          }
         }
       }
     }   
@@ -452,7 +456,7 @@ main {
         img {
           margin: 0 auto;
           width: 75%;
-          max-width: 350px;
+          max-width: 300px;
           height: auto;
           border-radius: 50%;
         }
@@ -516,7 +520,6 @@ main {
               margin-bottom: 5px;
               font-size: 1.5em;
               line-height: 1.2;
-              word-break: break-all;
             }
           }
         }
@@ -558,6 +561,16 @@ main {
     #contents {
       display: flex;
       flex-direction: row;
+
+      .content {
+        flex-basis: 65%;
+        padding-right: 15px;
+      }
+
+      .sidebar {
+        flex-basis: 35%;
+        padding-left: 15px;
+      }
     }
 
     .posts {

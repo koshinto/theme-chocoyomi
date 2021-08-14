@@ -34,9 +34,7 @@
       </div>
 
       <section class="sidebar">
-        <div>
-          <ul><?php dynamic_sidebar(); ?></ul>
-        </div>
+        <ul><?php dynamic_sidebar(); ?></ul>
       </section>
     </div>
     
@@ -48,7 +46,7 @@
       <h2 class="section-title">新着記事</h2>
     </div>
     <div id="contents">
-      <ul class="posts">
+      <ul class="posts content">
       <?php while(have_posts()): the_post(); ?>
       <li <?php post_class(); ?>>
         <a href="<?php the_permalink(); ?>">
@@ -67,9 +65,9 @@
       </li>
       <?php endwhile; ?>
       </ul>
-      <ul>
-        <?php dynamic_sidebar(); ?>
-      </ul>
+      <section class="sidebar">
+        <ul><?php dynamic_sidebar(); ?></ul>
+      </section>
     </div>
     <?php endif; ?>
 
