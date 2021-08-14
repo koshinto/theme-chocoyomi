@@ -100,6 +100,7 @@ img {
   flex-wrap: wrap;
   justify-content: left;
   list-style: none;
+  gap: 10px;
 
   li {
     background-color: $light-gray;
@@ -117,11 +118,6 @@ img {
     }
   }
 }
-
-.menu {
-  gap: 10px;
-}
-
 
 header {
   background-color: white;
@@ -357,16 +353,18 @@ main {
     #post-meta {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: start;
       margin-bottom: 50px;
       padding-left: 20px;
 
       time {
         color: $gray;
+        flex-shrink: 0;
       }
 
       .post-categories {
         margin-left: 10px;
+        flex-shrink: 1;
       }
     }
 
