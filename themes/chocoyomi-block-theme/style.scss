@@ -305,6 +305,7 @@ main {
     list-style: none;
 
     .page {
+      //　検索フィルターで除外する様に変更する
       display: none;
     }
 
@@ -342,7 +343,12 @@ main {
           }
         }
       }
-    }   
+    }
+  }
+
+  .notice-by-editorial {
+    max-width: 500px;
+    margin: 0 auto;
   }
 
   .single {
