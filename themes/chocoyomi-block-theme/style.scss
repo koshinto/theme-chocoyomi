@@ -435,6 +435,19 @@ main {
             text-align: center;
           }
         }
+
+        .wp-block-buttons {
+          justify-content: center;
+          
+          a {
+            color: white;
+            background-color: $black;
+          }
+
+          a:hover {
+            background-color: $main-color;
+          }
+        }
       }
     }
 
