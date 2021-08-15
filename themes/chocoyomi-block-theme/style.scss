@@ -500,6 +500,68 @@ main {
     }
   }
 
+  #comment-list {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+
+    a {
+      color: $black;
+    }
+
+    .says {
+      display: none;
+    }
+
+    .avatar {
+      @include box-edge(50%)
+    }
+
+    .comment {
+      margin-bottom: 30px;
+    }
+
+    .comment-meta {
+      padding-bottom: 5px;
+      
+      .comment-author {
+        display: flex;
+        align-items: center;
+
+        b {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .comment-metadata{
+      margin-left: 58px;
+      font-size: 14px;
+      
+      a {
+        color: $gray;
+      }
+
+      .comment-edit-link {
+        color: $main-color;
+        padding: 0 10px;
+      }
+
+      .comment-edit-link::before {
+        padding-right: 5px;
+        font-family: FontAwesome;
+        content: '\f304';
+      }
+    }
+
+    .comment-content {
+      margin-left: 58px;
+
+      p {
+      }
+    }
+  }
+
   // サイドバー・ウィジェット
   .sidebar {
     ul {
