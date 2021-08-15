@@ -532,32 +532,99 @@ main {
           margin-left: 10px;
         }
       }
+
+      .comment-metadata{
+        margin-left: 58px;
+        font-size: 14px;
+        
+        a {
+          color: $gray;
+        }
+  
+        .comment-edit-link {
+          color: $main-color;
+          padding: 0 10px;
+        }
+  
+        .comment-edit-link::before {
+          padding-right: 5px;
+          font-family: FontAwesome;
+          content: '\f304';
+        }
+      }
     }
-
-    .comment-metadata{
-      margin-left: 58px;
-      font-size: 14px;
-      
-      a {
-        color: $gray;
-      }
-
-      .comment-edit-link {
-        color: $main-color;
-        padding: 0 10px;
-      }
-
-      .comment-edit-link::before {
-        padding-right: 5px;
-        font-family: FontAwesome;
-        content: '\f304';
-      }
-    }
-
+    
     .comment-content {
       margin-left: 58px;
+    }
+
+  }
+
+  #respond {
+    #reply-title {
+      margin-bottom: 10px;
+    }
+    
+    .comment-form {
+      margin-bottom: 50px;
 
       p {
+        margin-bottom: 10px;
+      }
+    }
+
+    label {
+      display: block;
+    }
+
+    input, textarea {
+      background-color: $light-gray;
+      border: none;
+      padding: 5px 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    textarea {
+      width: 100%;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      margin-top: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      color: white;
+      background-color: $black;
+      border: none;
+      cursor: pointer;
+      @include box-edge();
+    }
+
+    input[type="submit"]:hover {
+      background-color: $main-color;
+    }
+
+    textarea {
+      resize: none;
+      height: 180px;
+    }
+
+    .required {
+      color: $required;
+    }
+
+    .comment-form-cookies-consent {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 20px 0;
+
+      label {
+        padding-left: 10px;
+        line-height: 1;
+        user-select: none;
       }
     }
   }
