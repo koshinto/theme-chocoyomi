@@ -172,6 +172,7 @@ header {
       background-color: inherit;
     }
 
+  // カテゴリー
   .categories {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -186,6 +187,7 @@ header {
           @include shadow();
           @include box-edge();
           padding: 7px 0;
+          z-index: 1;
 
           .menu-item {
             background: none;
