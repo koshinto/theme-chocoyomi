@@ -15,41 +15,61 @@
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+
 <header>
-  <div id="pc-nav-bar" class="bg-black">
-    <div id="pc-nav-bar-content" class="container container-m">
-      <button class="openSearchFieldButton"><i class="fas fa-search"></i>キーワードから記事を検索</button>
-      <?php wp_nav_menu(array(
-          'container' => 'nav',
-          'container_class' => 'contact',
-          'theme_location' => 'contact'
-        ));
-      ?>
-    </div>
-  </div>
   <div class="container">
-    <nav id="header-nav">
-      <h1 id="logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/logo.svg" width="300" height="104" alt="logo"></a></h1>
-      <button class="openSearchFieldButton sp-SearchFieldButton"><i class="fas fa-bars"></i></button>
-    </nav>
-    <section id="category" class="container-sp">
-      <p class="section-subtitle left">Category</p>
-      <h2 class="section-title left">カテゴリー</h2>
+    <div class="header-links">
+      <nav id="logo">
+          <a href="<?php echo home_url(); ?>">
+            <img src="<?php echo get_template_directory_uri() ?>/logo.svg"
+              width="300"
+              height="104"
+              alt="logo"
+            >
+          </a>
+      </nav>
       <?php wp_nav_menu(array(
         'container' => 'nav',
-        'container_class' => 'categories',
-        'theme_location' => 'categories'
-      ));
-      ?>
-    </section>
-  </div>
-  <div id="searchfield" class="hidden">
-    <div class="modal searchfield-modal">
-      <div class="searchfield-inner">
-        <h3 class="modal-title">キーワードから記事を検索</h3>
-        <?php get_search_form(); ?>
-        <button id="searchfieldclose"><i class="fas fa-times"></i>閉じる</button>
-      </div>
+        'container_class' => 'header-menu',
+        'theme_location' => 'header-menu'
+      )) ?>
+      <span id="open-drawer-menu"><i class="fas fa-bars"></i></span>
     </div>
   </div>
 </header>
+
+<nav id="drawer-menu">
+  <span id="close-drawer-menu"><i class="fas fa-times"></i></span>
+  <section>
+    <h4 class="drawer-menu-head">検索</h4>
+    <?php get_search_form(); ?>
+  </section>
+  <section id="categories">
+    <h4 class="drawer-menu-head">カテゴリー</h4>
+    <?php wp_nav_menu(array(
+      'container' => 'nav',
+      'container_class' => 'nav-columns-wrap',
+      'theme_location' => 'categories'
+    )) ?>
+  </section>
+  <section>
+    <h4 class="drawer-menu-head">コンタクト</h4>
+    <?php wp_nav_menu(array(
+        'container' => 'nav',
+        'container_class' => 'nav-columns-wrap',
+        'theme_location' => 'contact'
+      ));
+    ?>
+  </section>
+</nav>
+
+
+<div id="searchfield" class="hidden">
+  <div class="modal searchfield-modal">
+    <div class="searchfield-inner">
+      <h3 class="modal-title">キーワードから記事を検索</h3>
+      <?php get_search_form(); ?>
+      <button id="searchfieldclose"><i class="fas fa-times"></i>閉じる</button>
+    </div>
+  </div>
+</div>

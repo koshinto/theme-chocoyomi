@@ -2,6 +2,7 @@ $main-color: #E5446D;
 $background-header: #FFFFFF;
 $background-body: #F8F8F8;
 $black: #242423;
+$black-transparent: rgba(36, 36, 35, 0.9);
 $gray: #707070;
 $light-gray: #dee2e6;
 $required: #f94144;
@@ -22,6 +23,11 @@ $required: #f94144;
 
 @mixin shadow-bold {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@mixin fontawesome($unicode) {
+  font-family: FontAwesome;
+  content: $unicode;
 }
 
 * { margin: 0; }
@@ -85,34 +91,56 @@ img {
   display: none;
 }
 
-#menu-categories, .post-categories {
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: left;
-  list-style: none;
-  gap: 10px;
+header {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  z-index: 50;
 
-  li {
-    background-color: $light-gray;
-    font-size: 16px;
-    @include box-edge();
+  .header-links {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+  }
 
+  #logo {
     a {
       display: block;
-      padding: 10px 30px;
-      color: black;
-    }
 
-    .sub-menu {
-      list-style: none;
+      img {
+        height: 60px;
+
+      }
     }
   }
-}
 
-header {
-  background-color: white;
+  #open-drawer-menu {
+    margin-left: auto;
+    font-size: 3em;
+  }
+
+  .header-menu {
+    ul {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      list-style: none;
+      
+      li {
+        a {
+          display: block;
+          padding: 20px 10px;
+          color: $black;
+          transition-duration: 0.3s;
+          cursor: pointer;
+        }
+
+        a:hover {
+          opacity: 0.6;
+      }    
+      }
+    }
+  }
   
   #pc-nav-bar {
     // 768px以上で表示する
@@ -171,111 +199,166 @@ header {
       border: none;
       background-color: inherit;
     }
+  }
 
-  // カテゴリー
-  .categories {
-    padding-top: 20px;
-    padding-bottom: 20px;
 
-    ul {
-      li {
-        .sub-menu {
-          display: none;
-          position: absolute;
-          background-color: $light-gray;
-          flex-direction: column;
-          @include shadow();
-          @include box-edge();
-          padding: 7px 0;
-          z-index: 1;
+#drawer-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100vh;
+  background-color: $black-transparent;
+  overflow-y: scroll;
+  z-index: 100;
 
-          .menu-item {
-            background: none;
-            border-radius: 0;
-          }
+  section {
+    padding: 30px 0;
+  }
 
-          .menu-item:hover {
-            background-color: #cdd0d4;
-          }
-          
-          li{
-            a {
-              padding: 10px 30px;
-            }
-          }
-        }
-      }
+  #close-drawer-menu {
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin-top: 50px;
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+  }
 
-      .menu-item-has-children:hover .sub-menu {
-        display: block;
-      }
+  .drawer-menu-head {
+    text-align: center;
+    color: $background-body;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $background-body;
+  }
 
-      .menu-item-has-children {
-          > a::after {
-          font-family: FontAwesome;
-          content: "\f0d7";
-          padding-left: 5px;
-        }
-      }
+  // ドロワー検索フォーム
+  #search-form {
+    input[type="search"] {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding:  15px 10px;
+      font-size: 16px;
+      border: none;
+    }
+
+    button[type="submit"] {
+      display: block;
+      width: 100%;
+      color: white;
+      background-color: inherit;
+      border: none;
+      cursor: pointer;
     }
   }
-  
-  #searchfield {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba($color: $gray, $alpha: 0.9);
-    z-index: 1;
 
-    .modal {
-      position: absolute;
-      margin: 0;
-      top: 50%;
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%);
-    }
-    
-    .searchfield-inner {
-      padding: 30px;
-
-      #search-form {
-        input, button {
-          display: block;
+  // ドロワーメニューカラム
+  section {
+    .nav-columns-wrap {
+      ul {
+        margin-left: auto;
+        padding: 0;
+        list-style: none;
+        
+        li {
           width: 100%;
-          font-size: 16px;
-        }
-
-        input {
-          padding: 15px;
-          margin-bottom: 10px;
-          border: 3px solid black;
-          outline: none;
-        }
-
-        button {
-          margin-bottom: 50px;
-          padding-top: 10px;
-          padding-bottom: 10px;
-          color: white;
-          background-color: black;
-          border: none;
-        }
-      }
-
-      #searchfieldclose {
-        display: block;
-        width: 100%;
-        font-size: 20px;
-        background: none;
-        border: none;
-        cursor: pointer;
+          
+          a {
+            display: block;
+            padding: 15px;
+            color: white;
+           }
+  
+           a::after {
+             @include fontawesome('\f105');
+             position: absolute;
+             right: 20px;
+           }
+         }
+  
+         li:hover {
+           opacity: 0.8;
+         }
+  
+         .menu-item-has-children > a::after {
+            @include fontawesome('\f107');
+            text-align: right;
+         }
+         
+         .sub-menu {
+           display: none;
+           padding-left: 30px;
+          }
+  
+          .menu-item-has-children:hover .sub-menu {
+            display: block;
+          }
       }
     }
   }
 }
+
+  
+// 検索フォーム
+#searchfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($color: $gray, $alpha: 0.9);
+  z-index: 1;
+
+  .modal {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .searchfield-inner {
+    padding: 30px;
+
+    #search-form {
+      input, button {
+        display: block;
+        width: 100%;
+        font-size: 16px;
+      }
+
+      input {
+        padding: 15px;
+        margin-bottom: 10px;
+        border: 3px solid black;
+        outline: none;
+      }
+
+      button {
+        margin-bottom: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+        background-color: black;
+        border: none;
+      }
+    }
+
+    #searchfieldclose {
+      display: block;
+      width: 100%;
+      font-size: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
 
 main {
   padding: 50px 0;
