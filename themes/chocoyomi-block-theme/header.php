@@ -16,8 +16,8 @@
 </head>
 <body <?php body_class(); ?>>
 
-<header>
-  <div class="container">
+<header id="header">
+  <div class="container container-sp container-l">
     <div class="header-links">
       <nav id="logo">
           <a href="<?php echo home_url(); ?>">
@@ -33,13 +33,13 @@
         'container_class' => 'header-menu',
         'theme_location' => 'header-menu'
       )) ?>
-      <span id="open-drawer-menu"><i class="fas fa-bars"></i></span>
+      <span id="open-drawer-menu" class="toggle-drawer-menu-button"><i class="fas fa-bars"></i></span>
     </div>
   </div>
 </header>
 
-<nav id="drawer-menu">
-  <span id="close-drawer-menu"><i class="fas fa-times"></i></span>
+<nav id="drawer-menu" class="hide-drawer-menu">
+  <span id="close-drawer-menu-button" class="toggle-drawer-menu-button"><i class="fas fa-chevron-right"></i></span>
   <section>
     <h4 class="drawer-menu-head">検索</h4>
     <?php get_search_form(); ?>

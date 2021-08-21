@@ -1,11 +1,15 @@
+const glob = require('glob');
+
 const path = require('path');
 const outpath = path.join(__dirname, 'dist', 'js');
+
+const entries = glob.sync('./assets/js/*.js');
 
 module.exports = {
   mode: 'development',
   entry: {
     style: './style.js',
-    index: './index.js'
+    index: entries
   },
   output: {
     path: outpath,

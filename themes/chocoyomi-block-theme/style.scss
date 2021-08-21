@@ -91,9 +91,10 @@ img {
   display: none;
 }
 
-header {
+#header {
   width: 100%;
   background-color: white;
+  backdrop-filter: blur(3px);
   position: fixed;
   z-index: 50;
 
@@ -103,20 +104,16 @@ header {
     padding: 5px 0;
   }
 
-  #logo {
+  #logo {    
     a {
       display: block;
 
       img {
+        width: 150px;
         height: 60px;
 
       }
     }
-  }
-
-  #open-drawer-menu {
-    margin-left: auto;
-    font-size: 3em;
   }
 
   .header-menu {
@@ -202,34 +199,49 @@ header {
   }
 
 
+// Drawer Menu
+#open-drawer-menu {
+  margin-left: auto;
+  font-size: 3em;
+}
+
+.hide-drawer-menu {
+  transform: translateX(100vw);
+}
+
 #drawer-menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 60%;
+  position: fixed;
+  width: 100%;  // メニューの幅
   height: 100vh;
-  background-color: $black-transparent;
+  background-color: $black;
   overflow-y: scroll;
+  transition: .3s;
   z-index: 100;
 
   section {
     padding: 30px 0;
   }
 
-  #close-drawer-menu {
+  #close-drawer-menu-button {
     display: block;
-    width: 70px;
+    width: 100%;
     height: 70px;
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-left: auto;
     font-size: 3em;
     color: white;
-    text-align: center;
+    text-align: right;
     cursor: pointer;
+    
+    i {
+      padding-right: 20px;
+    }
   }
 
   .drawer-menu-head {
     text-align: center;
     color: $background-body;
+    margin-bottom: 20px;
     padding-bottom: 10px;
     border-bottom: 1px solid $background-body;
   }
@@ -241,7 +253,7 @@ header {
       width: 100%;
       margin: 10px 0;
       padding:  15px 10px;
-      font-size: 16px;
+      font-size: 1.5em;
       border: none;
     }
 
@@ -251,6 +263,7 @@ header {
       color: white;
       background-color: inherit;
       border: none;
+      font-size: 1.5em;
       cursor: pointer;
     }
   }
@@ -825,6 +838,7 @@ main {
 
 
 // メディアクエリ
+// Smartphone
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .container-sp {
     margin: 0 10px;
@@ -857,6 +871,7 @@ main {
   }
 }
 
+// Tablet
 @media screen and (min-width: 768px) {  
   .container {
     @include container();
@@ -866,7 +881,7 @@ main {
     @include container(720, 20);
   }
   
-  header {
+  #header {
     #pc-nav-bar {
       display: block;
     }
@@ -936,6 +951,7 @@ main {
   }
 }
 
+// PC
 @media screen and (min-width: 1024px) {
   .container {
     @include container(980, 30);
@@ -948,7 +964,7 @@ main {
     padding: 0 30px;
   }
 
-  header {
+  #header {
     .searchfield-modal {
       width: 50%;
     }
