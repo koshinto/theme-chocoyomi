@@ -134,7 +134,11 @@ img {
 
         a:hover {
           opacity: 0.6;
-      }    
+        }
+
+        .sub-menu {
+          display: none;
+        }
       }
     }
   }
@@ -211,6 +215,7 @@ img {
 
 #drawer-menu {
   position: fixed;
+  right: 0;
   width: 100%;  // メニューの幅
   height: 100vh;
   background-color: $black;
@@ -899,6 +904,14 @@ main {
     .searchfield-modal {
       width: 75%;
     }
+  }
+
+  #drawer-menu {
+    width: 50%;
+  }
+
+  .hide-drawer-menu {
+    transform: translateX(50vw);
   }
 
   main {
