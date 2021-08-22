@@ -101,7 +101,6 @@ img {
   .header-links {
     display: flex;
     align-items: center;
-    padding: 5px 0;
   }
 
   #logo {    
@@ -117,6 +116,8 @@ img {
   }
 
   .header-menu {
+    margin-left: 20px;
+    
     ul {
       display: flex;
       flex-direction: row;
@@ -133,7 +134,7 @@ img {
         }
 
         a:hover {
-          opacity: 0.6;
+          color: $main-color;
         }
 
         .sub-menu {
@@ -300,6 +301,10 @@ img {
          li:hover {
            opacity: 0.8;
          }
+
+         .menu-item {
+           margin-bottom: 10px;
+         }
   
          .menu-item-has-children > a::after {
             @include fontawesome('\f107');
@@ -379,7 +384,7 @@ img {
 
 
 main {
-  padding: 50px 0;
+  padding: 100px 0;
   background-color: $background-body;
 
   a {
@@ -849,9 +854,19 @@ main {
     margin: 0 10px;
   }
   
-  header {
+  #header {
     .searchfield-modal {
       width: 90%;
+    }
+
+    .header-links {
+      #logo {
+        margin: 0 auto;
+      }
+      
+      .header-menu {
+        display: none;
+      }
     }
   }
   
