@@ -38,6 +38,7 @@ module.exports = {
     publicPath: outpath,
     hot: true,
     hotOnly: true,
-    writeToDisk: true
+    writeToDisk: true,
+    watchContentBase: true
   }
 }
