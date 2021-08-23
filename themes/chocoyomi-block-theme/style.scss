@@ -100,6 +100,7 @@ img {
   background-color: white;
   backdrop-filter: blur(3px);
   position: fixed;
+  @include shadow();
   z-index: 50;
 
   .header-links {
@@ -131,6 +132,8 @@ img {
       li {
         a {
           display: block;
+          margin-left: 5px;
+          margin-right: 5px;
           padding: 20px 10px;
           color: $black;
           transition-duration: 0.3s;
@@ -142,7 +145,36 @@ img {
         }
 
         .sub-menu {
+          position: absolute;
           display: none;
+          box-sizing: border-box;
+          width: 100%;
+          left: 0;
+          text-align: center;
+          background-color: $main-color;
+          transition: all .3s 0 ease-in-out;
+          z-index: 25;
+
+          li {
+            display: inline-block;
+            
+            a {
+              padding: 10px;
+              color: white;
+            }
+          }
+        }
+      }
+
+      .menu-item-has-children:hover .sub-menu {
+        display: block;
+
+        li:hover {
+          background-color: white;
+          
+          a {
+            color: $main-color;
+          }
         }
       }
     }
