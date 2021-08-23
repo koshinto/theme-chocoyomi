@@ -64,10 +64,14 @@ img {
 }
 
 .section-title {
+  display: inline-block;
+  margin: 0 10px;
   color: black;
+  font-size: 2em;
 }
 
 .section-subtitle {
+  margin: 0 10px;
   color: $gray;
 }
 

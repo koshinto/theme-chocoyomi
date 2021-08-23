@@ -42,8 +42,8 @@
     <!-- 投稿一覧表示 -->
     <?php if(have_posts()): ?>
     <div class="title">
-      <span class="section-subtitle">Recent Posts</span>
       <h2 class="section-title">新着記事</h2>
+      <span class="section-subtitle">Recent Posts</span>
     </div>
     <div id="contents">
       <ul class="posts content">
@@ -83,8 +83,8 @@
       if($query->have_posts()):
     ?>
     <div class="title">
-      <span class="section-subtitle">Notice by Editorial</span>
       <h3 class="section-title">編集部のお知らせ</h3>
+      <span class="section-subtitle">Notice by Editorial</span>
     </div>
     <ul class="posts notice-by-editorial">
     <?php while($query->have_posts()): $query->the_post(); ?>
