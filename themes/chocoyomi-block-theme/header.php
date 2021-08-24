@@ -33,13 +33,16 @@
         'container_class' => 'header-menu',
         'theme_location' => 'header-menu'
       )) ?>
-      <span id="open-drawer-menu" class="toggle-drawer-menu-button"><i class="fas fa-bars"></i></span>
+      <div id="toggle-drawer-menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </div>
 </header>
 
 <nav id="drawer-menu" class="hide-drawer-menu">
-  <span id="close-drawer-menu-button" class="toggle-drawer-menu-button"><i class="fas fa-chevron-right"></i></span>
   <section>
     <h4 class="drawer-menu-head">検索</h4>
     <?php get_search_form(); ?>
@@ -62,14 +65,3 @@
     ?>
   </section>
 </nav>
-
-
-<div id="searchfield" class="hidden">
-  <div class="modal searchfield-modal">
-    <div class="searchfield-inner">
-      <h3 class="modal-title">キーワードから記事を検索</h3>
-      <?php get_search_form(); ?>
-      <button id="searchfieldclose"><i class="fas fa-times"></i>閉じる</button>
-    </div>
-  </div>
-</div>
