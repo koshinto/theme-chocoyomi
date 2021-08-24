@@ -382,7 +382,7 @@ input[type="submit"]:hover, button[type="submit"]:hover {
   }
 
   // ドロワー検索フォーム
-  #search-form {
+  .search-form {
     input[type="search"] {
       display: block;
       width: 100%;
@@ -476,7 +476,7 @@ input[type="submit"]:hover, button[type="submit"]:hover {
   .searchfield-inner {
     padding: 30px;
 
-    #search-form {
+    .search-form {
       input, button {
         display: block;
         width: 100%;
