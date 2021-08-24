@@ -825,8 +825,10 @@ main {
         ul {
           max-height: 500px;
           overflow-y: scroll;
+          scrollbar-width: thin;
+          scrollbar-color: $gray $light-gray;
 
-          li {
+          li {            
             a {
               display: block;
               padding: 15px 10px;
