@@ -63,10 +63,12 @@ img {
   }
 }
 
-input {
+input, textarea {
   box-sizing: border-box;
   width: 100%;
   padding: 10px;
+  background-color: $light-gray;
+  border: none;
 }
 
 input[type="submit"], button[type="submit"] {
@@ -756,19 +758,6 @@ main {
       display: block;
     }
 
-    input, textarea {
-      background-color: $light-gray;
-      border: none;
-      padding: 5px 10px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="url"],
-    textarea {
-      width: 100%;
-    }
-
     input[type="submit"] {
       width: 100%;
       margin-top: 20px;
@@ -802,7 +791,12 @@ main {
       align-items: center;
       margin: 20px 0;
 
+      input[type="checkbox"] {
+        flex: 0 1 20px;
+      }
+
       label {
+        flex: 0 1 auto;
         padding-left: 10px;
         line-height: 1;
         user-select: none;
@@ -821,6 +815,10 @@ main {
         box-sizing: border-box;
         padding: 20px 10px;
         background-color: white;
+
+        .widgettitle {
+          margin-bottom: 10px;
+        }
         
         ul {
           max-height: 500px;
