@@ -640,7 +640,7 @@ main {
         }
 
         p {
-          margin-bottom: 60px;
+          margin-bottom: 20px;
         }
 
         ul, ol {
@@ -659,10 +659,20 @@ main {
         }
 
         .wp-block-image {
+          margin-bottom: 60px;
+          
           img {
             width: 100%;
             height: auto;
             object-fit: cover;
+          }
+
+          figcaption {
+            margin-top: 0;
+            font-size: 14px;
+            font-weight: 200;
+            color: gray;
+            text-align: center;
           }
         }
 
