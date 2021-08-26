@@ -58,7 +58,19 @@
           <?php endif; ?>
             <div class="wp-post-summary">
               <h1 class="wp-post-title"><?php echo wp_trim_words(get_the_title(), 36, '...') ?></h1>
-              <time class="wp-post-date"><?php the_date(); ?></time>
+              <div class="wp-post-info">
+                <time class="wp-post-date"><?php the_date(); ?></time>
+                <ul class="wp-post-categories">
+                <?php
+                  $cats = get_the_category();
+                  foreach($cats as $cat):
+                ?>
+                  <li class="wp-post-category">
+                    <?php echo $cat->name; ?>
+                  </li>
+                <?php endforeach; ?>
+                </ul>
+              </div>
             </div>
           </div>
         </a>
