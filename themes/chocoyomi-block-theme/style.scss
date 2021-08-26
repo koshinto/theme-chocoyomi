@@ -418,36 +418,36 @@ input[type="submit"]:hover, button[type="submit"]:hover {
             display: block;
             padding: 15px;
             color: white;
-           }
+          }
   
-           a::after {
-             @include fontawesome('\f105');
-             position: absolute;
-             right: 20px;
-           }
-         }
+          a::after {
+            @include fontawesome('\f105');
+            position: absolute;
+            right: 20px;
+          }
+        }
   
-         li:hover {
-           opacity: 0.8;
-         }
+        li:hover {
+          opacity: 0.8;
+        }
 
-         .menu-item {
-           margin-bottom: 10px;
-         }
+        .menu-item {
+          margin-bottom: 10px;
+        }
   
-         .menu-item-has-children > a::after {
+        .menu-item-has-children > a::after {
             @include fontawesome('\f107');
             text-align: right;
-         }
-         
-         .sub-menu {
-           display: none;
-           padding-left: 30px;
-          }
+        }
+        
+        .sub-menu {
+          display: none;
+          padding-left: 30px;
+        }
   
-          .menu-item-has-children:hover .sub-menu {
-            display: block;
-          }
+        .menu-item-has-children:hover .sub-menu {
+          display: block;
+        }
       }
     }
   }
