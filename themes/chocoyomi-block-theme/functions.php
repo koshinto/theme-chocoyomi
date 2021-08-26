@@ -29,7 +29,7 @@ function get_category_url($category_name) {
 function the_categories() {
   $categories = get_categories();
   foreach($categories as $category) {
-    echo '<li>'.$category->name.'</li>';
+    echo '<li class="wp-post-category">'.$category->name.'</li>';
   }
 }
 

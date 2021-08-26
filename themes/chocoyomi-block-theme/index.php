@@ -60,12 +60,12 @@
               <h1 class="wp-post-title"><?php echo wp_trim_words(get_the_title(), 36, '...') ?></h1>
               <div class="wp-post-info">
                 <time class="wp-post-date"><?php the_date(); ?></time>
-                <ul class="wp-post-categories">
+                <ul class="post-categories">
                 <?php
                   $cats = get_the_category();
                   foreach($cats as $cat):
                 ?>
-                  <li class="wp-post-category">
+                  <li class="post-category">
                     <?php echo $cat->name; ?>
                   </li>
                 <?php endforeach; ?>
