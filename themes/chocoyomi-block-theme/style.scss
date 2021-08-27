@@ -188,14 +188,19 @@ input[type="submit"]:hover, button[type="submit"]:hover {
   display: none;
 }
 
+
+// カテゴリー一覧
 .post-categories {
   list-style: none;
   padding: 0;
   display: flex;
   flex-direction: row;
+  overflow-x: scroll;
+  scrollbar-width: none;
 
   li {
     font-size: 12px;
+    white-space: nowrap;
     margin-left: 10px;
     padding: 2px 10px;
     color: $main-color;
@@ -211,7 +216,12 @@ input[type="submit"]:hover, button[type="submit"]:hover {
       background-color: rgba($color: $main-color, $alpha: 0.1);
     }
   }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
+
 
 #header {
   width: 100%;
@@ -256,6 +266,7 @@ input[type="submit"]:hover, button[type="submit"]:hover {
           color: $black;
           transition-duration: 0.3s;
           cursor: pointer;
+          z-index: 50;
         }
 
         a:hover {
@@ -269,29 +280,36 @@ input[type="submit"]:hover, button[type="submit"]:hover {
           width: 100%;
           left: 0;
           text-align: center;
-          background-color: $main-color;
           transition: all .3s 0 ease-in-out;
-          z-index: 25;
+          z-index: 0;
 
           li {
+            box-sizing: border-box;
             display: inline-block;
+            background-color: $main-color;
+            border-radius: 25px;
+            margin-top: 10px;
+            margin-left: 3px;
+            margin-right: 3px;
+            transition-duration: .3s;
             
             a {
-              padding: 10px;
+              display: block;
+              padding: 5px 10px;
               color: white;
             }
           }
         }
       }
-
+      
       .menu-item-has-children:hover .sub-menu {
         display: block;
 
         li:hover {
-          background-color: white;
+          background-color: rgba($color: $main-color, $alpha: 0.8);
           
           a {
-            color: $main-color;
+            color: white;
           }
         }
       }
@@ -1052,11 +1070,11 @@ main {
 
 // メディアクエリ
 // Smartphone
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .container-sp {
     margin: 0 10px;
   }
-  
+
   #header {
     .searchfield-modal {
       width: 90%;
@@ -1069,26 +1087,6 @@ main {
       
       .header-menu {
         display: none;
-      }
-    }
-  }
-  
-  main {
-    .posts {
-      .post {
-        .post-columns {
-            width: 90%;
-
-            .wp-post-summary {
-            margin: 15px;
-
-            .wp-post-title {
-              margin-bottom: 5px;
-              font-size: 1.5em;
-              line-height: 1.2;
-            }
-          }
-        }
       }
     }
   }
