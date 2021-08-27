@@ -4,8 +4,8 @@
   <div class="container container-sp container-l">
   <?php if(have_posts()): ?>
     <div class="title">
-      <span class="section-subtitle">Categories</span>
       <h2 class="section-title"><?php single_cat_title(); ?></h2>
+      <span class="section-subtitle">Categories</span>
     </div>
     <div id="contents">
       <ul class="posts content">

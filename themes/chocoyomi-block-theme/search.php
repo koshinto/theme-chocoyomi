@@ -4,8 +4,8 @@
   <div class="container container-sp container-l">
   <?php if(have_posts()): ?>
     <div class="title">
-      <span class="section-subtitle">Search</span>
       <h2 class="section-title">「<?php the_search_query(); ?>」の検索結果</h2>
+      <span class="section-subtitle">Search</span>
     </div>
     <div id="contents">
       <ul class="posts content">
