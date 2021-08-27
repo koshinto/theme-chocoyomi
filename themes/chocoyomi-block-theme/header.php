@@ -44,7 +44,7 @@
 
 <nav id="drawer-menu" class="hide-drawer-menu">
   <section>
-    <h4 class="drawer-menu-head">検索</h4>
+    <h4 class="drawer-menu-head">記事を検索</h4>
     <?php get_search_form(); ?>
   </section>
   <section id="categories">
