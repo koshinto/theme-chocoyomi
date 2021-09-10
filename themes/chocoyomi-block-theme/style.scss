@@ -253,10 +253,7 @@ input[type="submit"]:hover, button[type="submit"]:hover {
 #header {
   width: 100%;
   background-color: white;
-  backdrop-filter: blur(3px);
-  position: fixed;
   @include shadow();
-  z-index: 50;
 
   .header-links {
     display: flex;
@@ -415,8 +412,9 @@ input[type="submit"]:hover, button[type="submit"]:hover {
 
 #drawer-menu {
   position: fixed;
+  top: 0;
   right: 0;
-  width: 80%;  // メニューの幅
+  width: 100%;  // メニューの幅
   height: 100vh;
   background-color: white;
   overflow-y: scroll;
@@ -425,7 +423,7 @@ input[type="submit"]:hover, button[type="submit"]:hover {
   @include shadow();
 
   section {
-    padding: 30px 0;
+    padding: 15px 0;
 
     &:first-child {
       margin-top: 75px;
