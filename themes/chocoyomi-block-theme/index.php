@@ -14,24 +14,24 @@
         <a href="<?php the_permalink(); ?>">
           <div class="post-columns">
           <?php if(has_post_thumbnail()): ?>
-            <div class="wp-post-image-wrap"><?php the_post_thumbnail(array(510, 510)); ?></div>
+            <?php the_post_thumbnail(array(510, 510)); ?>
           <?php else: ?>
-            <div class="wp-post-image-wrap"><img class="wp-post-image no-image" src="<?php echo get_template_directory_uri() ?>/assets/no_image.jpg" alt="noimage"></div>
+            <img class="wp-post-image no-image" src="<?php echo get_template_directory_uri() ?>/assets/no_image.jpg" alt="noimage">
           <?php endif; ?>
             <div class="wp-post-summary">
               <h1 class="wp-post-title"><?php echo wp_trim_words(get_the_title(), 36, '...') ?></h1>
               <div class="wp-post-info">
-                <time class="wp-post-date"><?php the_date(); ?></time>
                 <ul class="post-categories">
-                <?php
+                  <?php
                   $cats = get_the_category();
                   foreach($cats as $cat):
-                ?>
+                    ?>
                   <li class="post-category">
                     <?php echo $cat->name; ?>
                   </li>
-                <?php endforeach; ?>
+                  <?php endforeach; ?>
                 </ul>
+                <time class="wp-post-date"><?php the_date(); ?></time>
               </div>
             </div>
           </div>
