@@ -225,6 +225,10 @@ input[type="submit"]:hover, button[type="submit"]:hover {
   overflow-x: scroll;
   scrollbar-width: none;
 
+  a {
+    color: $main-color;
+  }
+
   li {
     font-size: 12px;
     white-space: nowrap;
@@ -253,7 +257,6 @@ input[type="submit"]:hover, button[type="submit"]:hover {
 #header {
   width: 100%;
   background-color: white;
-  @include shadow();
 
   .header-links {
     display: flex;
@@ -588,7 +591,6 @@ input[type="submit"]:hover, button[type="submit"]:hover {
 
 main {
   padding: 100px 0;
-  background-color: $background-body;
 
   a {
     color: $main-color;
@@ -654,7 +656,7 @@ main {
         }
       }
     }
-  }
+  }                                 
 
   .notice-by-editorial {
     max-width: 500px;
@@ -1031,6 +1033,10 @@ main {
       }
     }
   }
+}
+
+.single {
+  
 }
 
 #footer {
