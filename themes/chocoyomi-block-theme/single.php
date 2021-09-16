@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="single container container-sp container-l">
+<main class="single container container-sp container-l">
   <?php if(is_single()): ?>
   <?php
     $author_id = get_the_author_id();
@@ -33,7 +33,7 @@
     </div>
   <?php endif; ?>
   </div>
-</div>  <!-- end container -->
+</main>  <!-- end container -->
 
 
 <?php get_footer(); ?>
