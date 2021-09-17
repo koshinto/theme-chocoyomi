@@ -2,11 +2,12 @@
 
 <main class="container container-sp container-l">
     <!-- 投稿一覧表示 -->
-    <?php if(have_posts()): ?>
     <div class="title">
       <h2 class="section-title">新着記事</h2>
       <span class="section-subtitle">Recent Posts</span>
     </div>
+    
+    <?php if(have_posts()): ?>
     <div id="contents">
       <ul class="posts content">
       <?php while(have_posts()): the_post(); ?>
