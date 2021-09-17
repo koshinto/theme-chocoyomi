@@ -8,7 +8,7 @@
         $author = get_userdata($post->post_author);
       ?>
       <!-- 個別ページ -->
-      <h1 class="post-title"><?php the_title(); ?></h1>
+      <h1 class="post-title nam"><?php the_title(); ?></h1>
       <section class="post-meta">
         <time datetime="<?php echo get_the_date('Y-m-d'); ?>">
           <?php echo get_the_date(); ?>
@@ -22,18 +22,16 @@
             <?php the_content(); ?>
           </section>
           <div id="author-meta">
-            <span class="section-subtitle">Written By</span>
-            <h2 class="section-title">この記事を書いた人</h2>
             <div class="author-avatar"><?php echo get_avatar($author, 350); ?></div>
-            <div class="author-content">
-              <h2 class="author-nickname"><?php echo $author->nickname; ?></h2>
-              <p class="author-description"><?php echo $author->description; ?></p>
+            <div class="author-content nam">
+              <h2 class="author-nickname nam"><?php echo $author->nickname; ?></h2>
+              <p class="author-description nam"><?php echo $author->description; ?></p>
             </div>
           </div>
           <?php comments_template(); ?>
         </div>
       <?php endif; ?>
-    </div>
+    </div>  <!-- end single -->
   </div>  <!-- end entry -->
 </main>  <!-- end container -->
 

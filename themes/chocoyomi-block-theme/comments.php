@@ -1,8 +1,7 @@
 <section id="comment-form">
   <?php if(have_comments()): ?>
     <div class="sec-title">
-      <p class="color-red">Comments</p>
-      <h2>この記事のコメント</h2>
+      <h2 class="nam">この記事のコメント</h2>
     </div>
     <ul id="comment-list">
       <?php wp_list_comments('max_depth=1&format=html5&avatar_size=48'); ?>

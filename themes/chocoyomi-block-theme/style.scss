@@ -49,6 +49,11 @@ img {
   max-width: 100%;
 }
 
+
+.avatar {
+  border-radius: 50%;
+}
+
 .fas {
   padding-right: 5px;
 }
@@ -775,40 +780,23 @@ main {
         }
       }
     }
+  }
 
-    #author-meta {
-      box-sizing: border-box;
-      background-color: $light-gray;
-      width: 100%;
-      margin-bottom: 60px;
-      padding: 20px;
-      @include box-edge();
+  #author-meta {
+    display: flex;
+    
+    .author-avatar {
+      display: inline-block;
+      width: 150px;
+      height: 150px;
+      align-items: center;
+    }
 
-      .author-avatar {
-        display: block;
-        text-align: center;
-        margin: 20px auto;
-        
-        img {
-          margin: 0 auto;
-          width: 75%;
-          max-width: 300px;
-          height: auto;
-          border-radius: 50%;
-        }
-      }
+    .author-content {
+      display: inline-block;
 
-      .author-content {
-        .author-nickname {
-          margin-bottom: 10px;
-          text-align: center;
-        }
-
-        .author-description {
-          max-width: 500px;
-          margin: 0 auto;
-          line-height: 1.5;
-        }
+      .author-nickname {
+        margin-bottom: 10px;
       }
     }
   }
@@ -837,65 +825,77 @@ main {
       background: $light-gray;
     }
   }
+}  // end main
 
-  #comment-list {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+#comment-form {
+  margin-top: 50px;
+}
+#comment-list {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
 
-    a {
-      color: $black;
-    }
+  a {
+    color: $black;
+  }
 
-    .says {
-      display: none;
-    }
+  .says {
+    display: none;
+  }
 
-    .avatar {
-      @include box-edge(50%)
-    }
+  .avatar {
+    @include box-edge(50%)
+  }
 
-    .comment {
-      margin-bottom: 30px;
-    }
+  .comment {
+    margin-bottom: 30px;
+  }
 
-    .comment-meta {
-      padding-bottom: 5px;
-      
-      .comment-author {
-        display: flex;
-        align-items: center;
-
-        b {
-          margin-left: 10px;
-        }
-      }
-
-      .comment-metadata{
-        margin-left: 58px;
-        font-size: 14px;
-        
-        a {
-          color: $gray;
-        }
-  
-        .comment-edit-link {
-          color: $main-color;
-          padding: 0 10px;
-        }
-  
-        .comment-edit-link::before {
-          padding-right: 5px;
-          font-family: FontAwesome;
-          content: '\f304';
-        }
-      }
-    }
+  .comment-meta {
+    margin-bottom: 0;
+    padding-bottom: 5px;
     
-    .comment-content {
-      margin-left: 58px;
+    .comment-author {
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .avatar {
+        margin: 0;
+      }
+
+      b {
+        margin-left: 20px;
+        margin-bottom: 0;
+        align-items: center;
+      }
     }
 
+    .comment-metadata {
+      margin-left: 58px;
+      margin-bottom: 5px;
+      font-size: 14px;
+      
+      a {
+        color: $gray;
+      }
+
+      .comment-edit-link {
+        color: $main-color;
+        padding: 0 10px;
+      }
+
+      .comment-edit-link::before {
+        padding-right: 5px;
+        font-family: FontAwesome;
+        content: '\f304';
+      }
+    }
+  }
+  
+  .comment-content {
+    margin-left: 58px;
   }
 
   #respond {
@@ -1133,15 +1133,17 @@ main {
     img {
       margin: 0;
       width: 100%;
-      max-height: 300px;
+      height: auto;
       object-fit: cover;
       @include box-edge();
+      @include shadow();
     }
   }
 
   .wp-block-image {
     img {
       margin-bottom: 0;
+      @include box-edge();
     }
 
     figcaption {
@@ -1272,7 +1274,7 @@ main {
 
   main {
     #contents {
-      display: flex;
+      display: block;
       // ページのレイアウト
       //　タブレット以上のサイズでは2カラムレイアウト
       flex-direction: row;
@@ -1317,9 +1319,19 @@ main {
 
   #single {
     margin-top: 20px;
+
+    * :not(.nam) {
+      margin-bottom: 60px;
+    }
     
     .post-title {
       line-height: 1.5;
+    }
+
+    .wp-block-image {
+      box-sizing: border-box;
+      margin-left: 40px;
+      margin-right: 40px;
     }
   }
 
