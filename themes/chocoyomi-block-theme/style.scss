@@ -258,6 +258,7 @@ input[type="submit"]:hover, button[type="submit"]:hover {
 #header {
   width: 100%;
   background-color: white;
+  margin-bottom: 20px;
 
   .header-links {
     display: flex;
@@ -1236,6 +1237,8 @@ main {
   }
   
   #header {
+    margin-bottom: 50px;
+
     #pc-nav-bar {
       display: block;
     }
@@ -1268,8 +1271,6 @@ main {
   }
 
   main {
-    padding-top: 50px;
-
     #contents {
       display: flex;
       // ページのレイアウト
