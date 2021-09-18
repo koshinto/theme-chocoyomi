@@ -960,72 +960,72 @@ main {
       }
     }
   }
+}
 
-  // サイドバー・ウィジェット
-  .sidebar {
-    ul {
-      padding: 0;
-      list-style: none;
+// サイドバー・ウィジェット
+.sidebar {
+  ul {
+    padding: 0;
+    list-style: none;
 
-      .widget {
-        margin-bottom: 30px;
-        box-sizing: border-box;
-        padding: 20px 10px;
-        background-color: white;
+    .widget {
+      margin-bottom: 30px;
+      box-sizing: border-box;
+      padding: 20px 10px;
+      background-color: white;
 
-        .widgettitle {
-          margin-bottom: 10px;
-        }
-        
-        ul {
-          max-height: 500px;
-          overflow-y: scroll;
-          scrollbar-width: thin;
-          scrollbar-color: $gray $light-gray;
+      .widgettitle {
+        margin-bottom: 10px;
+      }
+      
+      ul {
+        max-height: 500px;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: $gray $light-gray;
 
-          li {            
-            a {
-              display: block;
-              padding: 15px 10px;
-              line-height: 1.5;
-            }
-          }
-
-          li:hover {
-            background: $light-gray;
-            @include box-edge();
+        li {            
+          a {
+            display: block;
+            padding: 15px 10px;
+            line-height: 1.5;
           }
         }
 
-        ::-webkit-scrollbar {
-          width: 5px;
+        li:hover {
+          background: $light-gray;
+          @include box-edge();
         }
-        
-        ul:hover ::-webkit-scrollbar {
-          width: 10px;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-          background-color: $gray;
-          border-radius: 5px;
-        }
+      }
 
-        ::-webkit-scrollbar-track {
-          background-color: $light-gray;
-          border-radius: 5px;
-        }
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+      
+      ul:hover ::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background-color: $gray;
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: $light-gray;
+        border-radius: 5px;
       }
     }
   }
+}
 
-  .tribe-events-widget-events-list {
-    .tribe-events-widget-events-list__header {
-      background: inherit;
-      
-      .tribe-events-widget-events-list__header-title {
-        font-size: 1.5em;
-        font-weight: bold;
-      }
+.tribe-events-widget-events-list {
+  .tribe-events-widget-events-list__header {
+    background: inherit;
+    
+    .tribe-events-widget-events-list__header-title {
+      font-size: 1.5em;
+      font-weight: bold;
     }
   }
 }
@@ -1269,12 +1269,12 @@ main {
   }
 
   .wp-post-image {
-    height: 300px;
+    height: 200px;
   }
 
   main {
     #contents {
-      display: block;
+      display: flex;
       // ページのレイアウト
       //　タブレット以上のサイズでは2カラムレイアウト
       flex-direction: row;
