@@ -43,6 +43,7 @@
 </header>
 
 <nav id="drawer-menu" class="hide-drawer-menu">
+  <div class="margin-65 only-smartphone"></div>
   <section>
     <h4 class="drawer-menu-head">記事を検索</h4>
     <?php get_search_form(); ?>
@@ -65,3 +66,5 @@
     ?>
   </section>
 </nav>
+
+<div class="margin-65 smartphone-only"></div>

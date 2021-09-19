@@ -58,6 +58,10 @@ img {
   padding-right: 5px;
 }
 
+.margin-65 {
+  height: 65px;
+}
+
 .modal {
   background-color: white;
   @include box-edge();
@@ -1215,6 +1219,8 @@ main {
   }
 
   #header {
+    position: fixed;
+
     .searchfield-modal {
       width: 90%;
     }
@@ -1262,6 +1268,10 @@ main {
 
 // Tablet
 @media screen and (min-width: 768px) {  
+  .smartphone-only {
+    display: none;
+  }
+  
   .container {
     @include container();
   }
@@ -1392,7 +1402,7 @@ main {
   
   .container-l {
     box-sizing: border-box;
-    max-width: 1024px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 30px;
   }
