@@ -225,6 +225,7 @@ input[type="submit"]:hover, button[type="submit"]:hover {
 
 // カテゴリー一覧
 .post-categories {
+  margin-bottom: 0;
   list-style: none;
   padding: 0;
   scrollbar-width: none;
@@ -266,6 +267,7 @@ input[type="submit"]:hover, button[type="submit"]:hover {
   width: 100%;
   background-color: white;
   margin-bottom: 20px;
+  border-bottom: 1px solid $light-gray;
   z-index: 50;
 
   .header-links {
@@ -315,7 +317,9 @@ input[type="submit"]:hover, button[type="submit"]:hover {
           display: none;
           box-sizing: border-box;
           width: 100%;
+          padding-bottom: 10px;
           left: 0;
+          border-bottom: 1px solid $light-gray;
           text-align: center;
           transition: all .3s 0 ease-in-out;
           z-index: 0;
@@ -787,24 +791,39 @@ main {
 
   #author-meta {
     display: flex;
+    box-sizing: border-box;
+    margin: 40px 0;
+    padding: 30px 15px;
+    background-color: $background-body;
+    @include box-edge();
     
-    .author-avatar {
-      display: inline-block;
-      width: 150px;
-      height: 150px;
+    .avatar {
+      margin-bottom: 0;
+      width: 120px;
+      height: 120px;
+      margin: 0;
       align-items: center;
     }
 
     .author-content {
       display: inline-block;
+      box-sizing: border-box;
+      margin-bottom: 0;
+      padding: 0 15px;
 
       .author-nickname {
-        margin-bottom: 10px;
+        margin-bottom: 0;
+      }
+
+      .author-description {
+        margin-bottom: 0;
+        line-height: 1.6;
       }
     }
   }
 
   .pagination {
+    width: 100%;
     margin-top: 50px;
     margin-bottom: 80px;
     text-align: center;
@@ -830,9 +849,17 @@ main {
   }
 }  // end main
 
+
+.posts {
+  display: flex;
+  flex-direction: column;
+}
+
+
 #comment-form {
   margin-top: 50px;
 }
+
 #comment-list {
   margin-top: 20px;
   padding: 0;
@@ -901,69 +928,75 @@ main {
     margin-left: 58px;
   }
 
-  #respond {
-    #reply-title {
+  .comment-awaiting-moderation {
+    color: $gray;
+  }
+}
+
+#respond {
+  #reply-title {
+    margin-bottom: 10px;
+  }
+  
+  .comment-form {
+    margin-bottom: 50px;
+
+    p {
       margin-bottom: 10px;
     }
-    
-    .comment-form {
-      margin-bottom: 50px;
+  }
 
-      p {
-        margin-bottom: 10px;
-      }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background-color: $black;
+    border: none;
+    cursor: pointer;
+    @include box-edge();
+  }
+
+  input[type="submit"]:hover {
+    background-color: $main-color;
+  }
+
+  textarea {
+    box-sizing: border-box;
+    resize: none;
+    max-width: 100%;
+    height: 180px;
+  }
+
+  .required {
+    color: $required;
+  }
+
+  .comment-form-cookies-consent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0;
+
+    input[type="checkbox"] {
+      flex: 0 1 20px;
     }
 
     label {
-      display: block;
-    }
-
-    input[type="submit"] {
-      width: 100%;
-      margin-top: 20px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      color: white;
-      background-color: $black;
-      border: none;
-      cursor: pointer;
-      @include box-edge();
-    }
-
-    input[type="submit"]:hover {
-      background-color: $main-color;
-    }
-
-    textarea {
-      box-sizing: border-box;
-      resize: none;
-      max-width: 100%;
-      height: 180px;
-    }
-
-    .required {
-      color: $required;
-    }
-
-    .comment-form-cookies-consent {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin: 20px 0;
-
-      input[type="checkbox"] {
-        flex: 0 1 20px;
-      }
-
-      label {
-        flex: 0 1 auto;
-        padding-left: 10px;
-        line-height: 1;
-        user-select: none;
-      }
+      flex: 0 1 auto;
+      padding-left: 10px;
+      line-height: 1;
+      user-select: none;
     }
   }
 }
+
 
 // サイドバー・ウィジェット
 .sidebar {
@@ -1295,6 +1328,21 @@ main {
 
   } // end main
 
+  .posts {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    > li {
+      width: 45%;
+      margin-left: auto;
+      margin-right: auto;
+
+      .wp-post-image {
+        height: 200px;
+      }
+    }
+  }
+
   .post-categories {
     margin-bottom: 5px;
   }
@@ -1322,10 +1370,6 @@ main {
 
   #single {
     margin-top: 20px;
-
-    * :not(.nam) {
-      margin-bottom: 60px;
-    }
     
     .post-title {
       line-height: 1.5;

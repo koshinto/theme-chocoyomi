@@ -22,7 +22,7 @@
             <?php the_content(); ?>
           </section>
           <div id="author-meta">
-            <div class="author-avatar"><?php echo get_avatar($author, 350); ?></div>
+            <?php echo get_avatar($author, 350); ?>
             <div class="author-content nam">
               <h2 class="author-nickname nam"><?php echo $author->nickname; ?></h2>
               <p class="author-description nam"><?php echo $author->description; ?></p>
