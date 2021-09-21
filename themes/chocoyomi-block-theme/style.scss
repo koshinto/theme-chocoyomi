@@ -828,8 +828,6 @@ main {
 
   .pagination {
     width: 100%;
-    margin-top: 50px;
-    margin-bottom: 80px;
     text-align: center;
 
     .page-numbers {
@@ -1057,6 +1055,11 @@ main {
       }
     }
   }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .tribe-events-widget-events-list {
@@ -1237,7 +1240,7 @@ main {
   }
 
   .wp-post-image {
-    height: 200px;
+    height: 250px;
   }
 
   #single {
@@ -1263,6 +1266,14 @@ main {
         }
       }
     }
+  }
+
+  .pagination {
+    margin-bottom: 30px;
+  }
+
+  .sidebar {
+    display: none;
   }
 }
 
@@ -1314,9 +1325,6 @@ main {
     transform: translateX(50vw);
   }
 
-  .wp-post-image {
-    height: 200px;
-  }
 
   main {
     #contents {
@@ -1341,14 +1349,17 @@ main {
   .posts {
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: baseline;
+    row-gap: 0;
 
     > li {
       width: 45%;
+      height: auto;
       margin-left: auto;
       margin-right: auto;
 
       .wp-post-image {
-        height: 200px;
+        height: 300px;
       }
     }
   }
