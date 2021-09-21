@@ -294,7 +294,7 @@ input[type="submit"]:hover, button[type="submit"]:hover {
   .header-menu {
     margin-left: 20px;
     
-    ul {
+    .menu {
       display: flex;
       flex-direction: row;
       padding: 0;
@@ -1096,7 +1096,7 @@ main {
     padding-top: 30px;
     padding-bottom: 30px;
 
-    #menu-footer-menu {
+    .menu {
       .menu-item {
         text-align: center;
 
@@ -1212,6 +1212,50 @@ main {
     }
   }
 } // end single
+
+
+.pages {
+  h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .page-title {
+    margin-bottom: 50px;
+  }
+
+  .page {
+    p {
+      margin-bottom: 50px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .wp-block-table {
+      max-width: 800px;
+      margin: 0 auto;
+
+      table {
+        border: 1px solid $gray;
+        box-sizing: border-box;
+        padding: 10px;
+
+        td {
+          box-sizing: content-box;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .estimated-reading-time {
+    display: none;
+  }
+}
 
 
 // メディアクエリ
